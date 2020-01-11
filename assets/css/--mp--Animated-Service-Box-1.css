@@ -1,0 +1,147 @@
+.serviceBox {
+  text-align: center;
+}
+
+.serviceBox .service-icon {
+  display: inline-block;
+  width: 100px;
+  height: 150px;
+  line-height: 145px;
+  border-radius: 5px;
+  background: #f16623;
+  border: 5px solid #cecece;
+  border-left: none;
+  border-right: none;
+  font-size: 45px;
+  color: #fff;
+  margin-bottom: 80px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+
+.serviceBox .service-icon:before, .serviceBox .service-icon:after {
+  content: "";
+  width: 107px;
+  height: 107px;
+  border-radius: 5px;
+  background: #f16623;
+  border: 7px solid #cecece;
+  border-top: none;
+  border-right: none;
+  position: absolute;
+  top: 50%;
+  left: -52px;
+  transform: scaleX(0.5) translateY(-50%) rotate(45deg);
+}
+
+.serviceBox .service-icon:after {
+  border: 7px solid #cecece;
+  border-bottom: none;
+  border-left: none;
+  left: auto;
+  right: -52px;
+}
+
+.serviceBox .service-icon i {
+  z-index: 1;
+  position: relative;
+}
+
+.serviceBox .titleBlurb {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+
+.serviceBox:hover .titleBlurb {
+  color: #f16623;
+}
+
+.serviceBox .titleBlurb:before, .serviceBox .titleBlurb:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  background: linear-gradient(to right top, #f16623 48%, transparent 50%);
+  position: absolute;
+  top: -32px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transform: rotate(-45deg);
+}
+
+.serviceBox .titleBlurb:after {
+  width: 2px;
+  height: 0;
+  border: 3px dotted #929292;
+  opacity: 0;
+  top: -85px;
+  z-index: 0;
+  transform: rotate(0);
+  transition: all 0.5s ease 0s;
+}
+
+.serviceBox:hover .titleBlurb:after {
+  height: 70px;
+  opacity: 1;
+}
+
+.serviceBox .description {
+  font-size: 15px;
+  color: #6f6f6f;
+  letter-spacing: 1px;
+  line-height: 27px;
+  margin-top: 10px;
+}
+
+.serviceBox.blue .service-icon, .serviceBox.blue .service-icon:before, .serviceBox.blue .service-icon:after {
+  background: #2a80b9;
+}
+
+.serviceBox.blue:hover .titleBlurb {
+  color: #2a80b9;
+}
+
+.serviceBox.blue .title:before {
+  background: linear-gradient(to right top, #2a80b9 48%, transparent 50%);
+}
+
+.serviceBox.green .service-icon, .serviceBox.green .service-icon:before, .serviceBox.green .service-icon:after {
+  background: #069c1b;
+}
+
+.serviceBox.green:hover .titleBlurb {
+  color: #069c1b;
+}
+
+.serviceBox.green .titleBlurb:before {
+  background: linear-gradient(to right top, #069c1b 48%, transparent 50%);
+}
+
+.serviceBox.pink .service-icon, .serviceBox.pink .service-icon:before, .serviceBox.pink .service-icon:after {
+  background: #d53863;
+}
+
+.serviceBox.pink:hover .titleBlurb {
+  color: #d53863;
+}
+
+.serviceBox.pink .titleBlurb:before {
+  background: linear-gradient(to right top, #d53863 48%, transparent 50%);
+}
+
+@media only screen and (max-width:990px) {
+  .serviceBox {
+    margin-bottom: 30px;
+  }
+}
+
+.serviceBox.skyblue {
+}
+
