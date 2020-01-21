@@ -1,13 +1,12 @@
 .card-header {
   height: 200px;
   background-color: #7f70f5;
-  /*background: linear-gradient(180deg,#7f70f5,#0ea0ff);*/
 }
 
 #download-icon {
   font-size: 30px;
-  color: rgba(0,0,0,0.2);
-  opacity: 1;
+  color: black;
+  opacity: 0.4;
 }
 
 #heading-card {
@@ -53,8 +52,7 @@
   z-index: 99;
 }
 
-.card-header:hover {
-  /*background-color: #ffb366;*/
-  background: linear-gradient(180deg,rgba(127,112,245,0.9),rgba(14,160,255,0.9));
+.card-header:first-child:hover {
+  background-color: rgba(127,112,245,0.9);
 }
 
