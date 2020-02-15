@@ -14,7 +14,7 @@
   right: 0;
   width: 300px;
   height: 300px;
-  background: linear-gradient(120deg,#7f70f5,#0ea0ff);
+  background: #149dfe;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   -webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
