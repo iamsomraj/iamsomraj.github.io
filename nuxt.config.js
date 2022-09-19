@@ -32,6 +32,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // cloudinary module https://cloudinary.nuxtjs.org/
+    '@nuxtjs/cloudinary',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -39,4 +41,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // cloudinary
+  cloudinary: {
+    cloudName: 'dcdtch5mx',
+  },
 }
