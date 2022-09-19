@@ -1,3 +1,3 @@
 export default {
-  THEME: 'somraj-mukherjee-ui-theme',
+  THEME: 'color-ui-theme',
 }

@@ -9,8 +9,11 @@
         <img
           :src="avatar_url"
           alt="Somraj Mukherjee Avatar Image"
-          class="h-32 w-32 flex-shrink-0 rounded-full object-cover grayscale filter transition-all duration-300"
-          :class="{ 'opacity-70': isDarkMode, 'opacity-90': !isDarkMode }"
+          class="h-32 w-32 flex-shrink-0 rounded-full object-cover filter transition-all duration-300"
+          :class="{
+            'opacity-60 sepia': isDarkMode,
+            'opacity-90 grayscale': !isDarkMode,
+          }"
         />
       </div>
       <!-- End: Image -->
