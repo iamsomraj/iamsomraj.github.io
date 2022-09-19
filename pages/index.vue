@@ -12,5 +12,8 @@ export default {
   components: {
     HeroSection,
   },
+  mounted() {
+    this.$store.dispatch('theme/handleTheme')
+  },
 }
 </script>
