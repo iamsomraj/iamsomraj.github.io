@@ -4,8 +4,8 @@ export const state = () => ({
   designation: 'Full Stack Developer',
   description:
     'I have a passion for web development. I enjoy creating solutions that make life easier for people.',
-})
-
+    
+  })
 export const getters = {
   avatar_url: (state) => state.avatar_url,
   name: (state) => state.name,
