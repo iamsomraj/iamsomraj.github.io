@@ -1,8 +1,8 @@
 <template>
   <div
-    class="snap-start flex min-h-screen w-screen items-center justify-center bg-skin"
+    class="snap-start relative flex min-h-screen w-screen items-center justify-center bg-skin"
   >
-    <!-- Begin: Image, Name and Designation -->
+    <!-- Begin: Image, Name, Designation and Description -->
     <div class="flex flex-col items-center justify-start space-y-4">
       <!-- Begin: Image -->
       <div>
@@ -25,8 +25,28 @@
         {{ designation }}
       </h2>
       <!-- End: Designation -->
+
+      <!-- Begin: Description -->
+      <p class="max-w-xl text-center text-lg text-ash">
+        {{ description }}
+      </p>
+      <!-- End: Description -->
     </div>
-    <!-- End: Image, Name and Designation -->
+    <!-- End: Image, Name, Designation and Description -->
+
+    <!-- Begin: Top Header Section - Logo and Get MY CV button -->
+    <div
+      class="absolute top-0 flex h-36 w-full items-center justify-between bg-red-300"
+    >
+      <!-- Begin: Logo -->
+      <div></div>
+      <!-- End: Logo -->
+
+      <!-- Begin: Get My CV button -->
+      <div></div>
+      <!-- End: Get My CV button -->
+    </div>
+    <!-- End: Top Header Section - Logo and Get MY CV button -->
   </div>
 </template>
 
@@ -39,6 +59,9 @@ export default {
     },
     designation() {
       return this.$store.getters['hero-section/designation']
+    },
+    description() {
+      return this.$store.getters['hero-section/description']
     },
     avatar_url() {
       const avatar = this.$store.getters['hero-section/avatar_url']
