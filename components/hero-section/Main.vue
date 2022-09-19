@@ -1,5 +1,7 @@
 <template>
-  <div class="flex min-h-screen w-screen items-center justify-center bg-skin">
+  <div
+    class="snap-start flex min-h-screen w-screen items-center justify-center bg-skin"
+  >
     <!-- Begin: Image, Name and Designation -->
     <div class="flex flex-col items-center justify-start space-y-4">
       <!-- Begin: Image -->

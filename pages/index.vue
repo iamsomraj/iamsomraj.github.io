@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="snap-y snap-mandatory h-screen w-screen overflow-scroll">
     <!-- Hero Section -->
     <hero-section />
   </div>
