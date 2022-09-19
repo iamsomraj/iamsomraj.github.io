@@ -6,7 +6,7 @@
       <div>
         <img
           :src="avatar_url"
-          alt="An image example with Cloudinary"
+          alt="Somraj Mukherjee Avatar Image"
           class="h-32 w-32 flex-shrink-0 rounded-full object-cover sepia filter"
         />
       </div>
