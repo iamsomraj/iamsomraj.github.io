@@ -39,7 +39,7 @@
       <!-- End: Description -->
 
       <!-- Begin: Buttons -->
-      <div class="flex flex-col items-center justify-center space-y-4">
+      <div class="flex flex-col items-center justify-center space-y-4 py-8">
         <!-- Begin: Primary Button -->
         <primary-button :label="'Contact Me'" />
         <!-- End: Primary Button -->
