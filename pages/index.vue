@@ -1,5 +1,7 @@
 <template>
-  <Tutorial />
+  <div>
+    Hello World
+  </div>
 </template>
 
 <script>
