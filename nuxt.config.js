@@ -55,4 +55,14 @@ export default {
   cloudinary: {
     cloudName: 'dcdtch5mx',
   },
+
+  // tailwind
+  tailwindcss: {
+    cssPath: '/assets/css/main.css',
+    configPath: './tailwind.config.js',
+    exposeConfig: false,
+    config: {},
+    injectPosition: 0,
+    viewer: true,
+  },
 }
