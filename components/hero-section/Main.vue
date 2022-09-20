@@ -1,6 +1,6 @@
 <template>
   <div
-    class="snap-start relative flex min-h-screen w-screen items-center justify-center bg-skin px-6 transition-all duration-300 dark:bg-ash"
+    class="relative flex min-h-screen w-screen snap-start items-center justify-center bg-skin px-6 transition-all duration-300 dark:bg-ash"
   >
     <!-- Begin: Image, Name, Designation and Description -->
     <div class="flex flex-col items-center justify-start space-y-4">
@@ -9,10 +9,10 @@
         <img
           :src="avatar_url"
           alt="Somraj Mukherjee Avatar Image"
-          class="h-32 w-32 flex-shrink-0 rounded-full object-cover filter transition-all duration-300"
+          class="h-32 w-32 flex-shrink-0 rounded-full object-cover transition-all duration-300"
           :class="{
-            'opacity-60 sepia': isDarkMode,
-            'opacity-90 grayscale': !isDarkMode,
+            'opacity-60 sepia filter': isDarkMode,
+            'opacity-90 grayscale filter': !isDarkMode,
           }"
         />
       </div>
