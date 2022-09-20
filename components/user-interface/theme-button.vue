@@ -1,5 +1,5 @@
 <template>
-  <button
+  <div
     class="flex items-center justify-center space-x-2 transition-all duration-500"
     @click="toggleTheme"
   >
@@ -8,10 +8,10 @@
       :class="{ hidden: !isDarkMode }"
     ></moon-icon>
     <sun-icon
-      class="h-6 w-6 cursor-pointer transition-all duration-300"
+      class="h-6 w-6 cursor-pointer stroke-ash transition-all duration-300"
       :class="{ hidden: isDarkMode }"
     ></sun-icon>
-  </button>
+  </div>
 </template>
 
 <script>
