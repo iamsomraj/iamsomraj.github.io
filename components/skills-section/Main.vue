@@ -5,13 +5,17 @@
       <h2
         class="mb-20 font-glacial-bold text-2xl font-bold tracking-wider text-dark dark:text-skin"
       >
-        EXPERIENCE
+        TECHNICAL SKILLS
       </h2>
       <!-- End: Skill Section Header -->
 
       <!-- Begin: Skill List -->
       <div class="grid gap-6 md:grid-cols-3">
-        <skill-item v-for="skill in skills" :key="skill.id" :skill="skill" />
+        <skill-item
+          v-for="skill in filteredSkills"
+          :key="skill.id"
+          :skill="skill"
+        />
       </div>
       <!-- End: Skill List -->
     </div>
@@ -25,8 +29,10 @@ export default {
   name: 'SkillsSection',
   components: { BaseSection, SkillItem },
   computed: {
-    skills() {
-      return this.$store.getters['skills-section/skills']
+    filteredSkills() {
+      const skills = this.$store.getters['skills-section/skills']
+      const skillsCopy = [...skills]
+      return skillsCopy.sort((a, b) => b.progress - a.progress)
     },
   },
 }

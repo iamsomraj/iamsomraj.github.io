@@ -6,11 +6,11 @@ export const state = () => ({
     },
     {
       name: 'REACT',
-      progress: 80,
+      progress: 70,
     },
     {
       name: 'OBJECTION',
-      progress: 70,
+      progress: 60,
     },
     {
       name: 'EXPRESS',
@@ -18,7 +18,11 @@ export const state = () => ({
     },
     {
       name: 'SQL',
-      progress: 70,
+      progress: 60,
+    },
+    {
+      name: 'KNEX',
+      progress: 50,
     },
   ],
 })

@@ -1,22 +1,24 @@
 <template>
   <div
-    class="flex flex-col items-start justify-start space-y-2 rounded-lg border border-ash p-6 dark:border-skin"
+    class="flex flex-col items-start justify-start space-y-4 rounded-lg border border-ash p-6 dark:border-skin"
   >
-    <!-- Begin: Skill Logo -->
-    <div
-      class="flex h-12 w-12 items-center justify-center rounded-lg bg-ash text-skin transition-all duration-300 dark:bg-skin dark:text-ash"
-    >
-      <StarIcon class="h-12 w-12 flex-shrink-0 fill-skin dark:fill-ash" />
-    </div>
-    <!-- End: Skill Logo -->
+    <div class="flex items-center justify-between space-x-4">
+      <!-- Begin: Skill Logo -->
+      <div
+        class="flex h-12 w-12 items-center justify-center rounded-lg bg-ash text-skin transition-all duration-300 dark:bg-skin dark:text-ash"
+      >
+        <StarIcon class="h-12 w-12 flex-shrink-0 fill-skin dark:fill-ash" />
+      </div>
+      <!-- End: Skill Logo -->
 
-    <!-- Begin: Skill Name -->
-    <h3
-      class="font-glacial-bold text-2xl font-bold uppercase tracking-wider text-dark dark:text-skin"
-    >
-      {{ name }}
-    </h3>
-    <!-- End: Skill Name -->
+      <!-- Begin: Skill Name -->
+      <h3
+        class="font-glacial-bold text-2xl font-bold uppercase tracking-wider text-dark dark:text-skin"
+      >
+        {{ name }}
+      </h3>
+      <!-- End: Skill Name -->
+    </div>
 
     <!-- Begin: Skill Progress Bar -->
     <div
