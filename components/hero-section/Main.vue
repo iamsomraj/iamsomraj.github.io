@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="relative flex min-h-screen w-screen snap-start items-center justify-center bg-skin px-6 transition-all duration-300 dark:bg-ash"
-  >
+  <base-section class="relative">
     <!-- Begin: Image, Name, Designation and Description -->
     <div class="flex flex-col items-center justify-start space-y-4">
       <!-- Begin: Image -->
@@ -39,7 +37,7 @@
       <!-- End: Description -->
 
       <!-- Begin: Buttons -->
-      <div class="flex flex-col items-center justify-center space-y-4 py-8">
+      <div class="flex flex-col items-center justify-center space-y-4 pt-12">
         <!-- Begin: Primary Button -->
         <primary-button :label="'Contact Me'" />
         <!-- End: Primary Button -->
@@ -69,7 +67,7 @@
       <!-- End: Theme and Get My CV Button -->
     </div>
     <!-- End: Top Header Section - Logo and Get MY CV button -->
-  </div>
+  </base-section>
 </template>
 
 <script>
@@ -77,10 +75,17 @@ import BaseLogo from '../user-interface/base-logo.vue'
 import PrimaryButton from '../user-interface/primary-button.vue'
 import SecondaryButton from '../user-interface/secondary-button.vue'
 import ThemeButton from '../user-interface/theme-button.vue'
+import BaseSection from '../user-interface/base-section.vue'
 
 export default {
   name: 'HeroSection',
-  components: { BaseLogo, PrimaryButton, SecondaryButton, ThemeButton },
+  components: {
+    BaseLogo,
+    PrimaryButton,
+    SecondaryButton,
+    ThemeButton,
+    BaseSection,
+  },
   computed: {
     name() {
       return this.$store.getters['hero-section/name']
