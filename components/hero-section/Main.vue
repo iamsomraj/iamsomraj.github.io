@@ -3,7 +3,9 @@
     <!-- Begin: Image, Name, Designation and Description -->
     <div class="flex flex-col items-center justify-start space-y-4">
       <!-- Begin: Image -->
-      <div>
+      <div
+        class="flex h-28 w-28 flex-shrink-0 items-center justify-center rounded-full border-4 border-ash dark:border-skin"
+      >
         <img
           :src="avatar_url"
           alt="Somraj Mukherjee Avatar Image"
@@ -18,7 +20,7 @@
 
       <!-- Begin: Name -->
       <h1
-        class="text-center font-glacial-bold text-4xl font-bold text-dark dark:text-skin"
+        class="text-center font-glacial-bold text-4xl font-bold uppercase tracking-wider text-dark dark:text-skin"
       >
         {{ name }}
       </h1>
@@ -48,7 +50,7 @@
 
     <!-- Begin: Top Header Section - Logo and Get MY CV button -->
     <div
-      class="absolute top-0 flex h-24 w-full items-center justify-between px-12"
+      class="fixed top-0 flex h-24 w-full items-center justify-between bg-skin px-12 dark:bg-ash"
     >
       <!-- Begin: Logo -->
       <base-logo />
