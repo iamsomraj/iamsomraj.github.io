@@ -48,7 +48,7 @@
 
     <!-- Begin: Top Header Section - Logo and Get MY CV button -->
     <div
-      class="absolute top-0 flex h-24 w-full items-center justify-between px-6"
+      class="absolute top-0 flex h-24 w-full items-center justify-between px-12"
     >
       <!-- Begin: Logo -->
       <base-logo />
