@@ -9,10 +9,10 @@
         <img
           :src="avatar_url"
           alt="Somraj Mukherjee Avatar Image"
-          class="h-32 w-32 flex-shrink-0 rounded-full object-cover transition-all duration-300"
+          class="h-24 w-24 flex-shrink-0 rounded-full object-cover transition-all duration-300"
           :class="{
-            'opacity-60 sepia filter': isDarkMode,
-            'opacity-90 grayscale filter': !isDarkMode,
+            'opacity-60': isDarkMode,
+            'opacity-90': !isDarkMode,
           }"
         />
       </div>
@@ -92,8 +92,14 @@ export default {
       return this.$store.getters['hero-section/description']
     },
     avatar_url() {
-      const avatar = this.$store.getters['hero-section/avatar_url']
-      return this.$cloudinary.image.url(avatar)
+      const avatarSepia = this.$store.getters['hero-section/avatar_sepia']
+      const avatarGrayscale =
+        this.$store.getters['hero-section/avatar_grayscale']
+      if (this.isDarkMode) {
+        return this.$cloudinary.image.url(avatarSepia)
+      } else {
+        return this.$cloudinary.image.url(avatarGrayscale)
+      }
     },
     isDarkMode() {
       return this.$store.getters['theme/isDarkTheme']
