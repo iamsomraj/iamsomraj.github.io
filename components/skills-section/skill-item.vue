@@ -34,12 +34,6 @@
       ></div>
     </div>
     <!-- End: Skill Progress Bar -->
-
-    <!-- Begin: Skill Description -->
-    <p class="text-base font-light leading-relaxed text-dark dark:text-skin">
-      {{ description }}
-    </p>
-    <!-- End: Skill Description -->
   </div>
 </template>
 
@@ -53,16 +47,13 @@ export default {
       type: Object,
       required: true,
       validator: (value) => {
-        return value.name && value.description && value.progress
+        return value.name && value.progress
       },
     },
   },
   computed: {
     name() {
       return this.skill.name
-    },
-    description() {
-      return this.skill.description
     },
     progress() {
       return this.skill.progress
