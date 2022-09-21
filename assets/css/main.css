@@ -11,3 +11,12 @@
   font-family: 'glacial-bold';
   src: url('../fonts/glacial-indifference/GlacialIndifference-Bold.otf');
 }
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
