@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-screen snap-y snap-mandatory overflow-scroll">
+  <div>
     <slot></slot>
   </div>
 </template>
