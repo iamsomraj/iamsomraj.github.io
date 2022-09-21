@@ -1,6 +1,6 @@
 <template>
   <h1
-    class="font-glacial-bold text-4xl font-bold uppercase leading-relaxed tracking-wider text-dark dark:text-skin"
+    class="font-glacial-bold text-4xl font-bold uppercase leading-10 tracking-wider text-dark dark:text-skin"
     :class="`text-${align}`"
   >
     {{ text }}

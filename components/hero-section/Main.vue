@@ -1,5 +1,5 @@
 <template>
-  <base-section class="relative">
+  <base-section>
     <!-- Begin: Image, Name, Designation and Description -->
     <div class="flex flex-col items-center justify-start space-y-4">
       <!-- Begin: Image -->
@@ -41,47 +41,19 @@
       <!-- End: Buttons -->
     </div>
     <!-- End: Image, Name, Designation and Description -->
-
-    <!-- Begin: Top Header Section - Logo and Get MY CV button -->
-    <div
-      class="fixed top-0 flex h-24 w-full items-center justify-between bg-skin px-12 dark:bg-ash"
-    >
-      <!-- Begin: Logo -->
-      <base-logo />
-      <!-- End: Logo -->
-
-      <!-- Begin: Theme and Get My CV Button -->
-      <div class="flex items-center justify-between space-x-2">
-        <!-- Begin: Theme Button for Switching Modes -->
-        <ThemeButton />
-        <!-- End: Theme Button for Switching Modes -->
-
-        <!-- Begin: Get My CV button -->
-        <secondary-button :label="'Get My CV'" />
-        <!-- End: Get My CV button -->
-      </div>
-      <!-- End: Theme and Get My CV Button -->
-    </div>
-    <!-- End: Top Header Section - Logo and Get MY CV button -->
   </base-section>
 </template>
 
 <script>
-import BaseLogo from '../user-interface/base-logo.vue'
 import BaseSection from '../user-interface/base-section.vue'
 import PrimaryButton from '../user-interface/primary-button.vue'
 import PrimaryText from '../user-interface/primary-text.vue'
-import SecondaryButton from '../user-interface/secondary-button.vue'
 import SecondaryText from '../user-interface/secondary-text.vue'
-import ThemeButton from '../user-interface/theme-button.vue'
 
 export default {
   name: 'HeroSection',
   components: {
-    BaseLogo,
     PrimaryButton,
-    SecondaryButton,
-    ThemeButton,
     BaseSection,
     PrimaryText,
     SecondaryText,
