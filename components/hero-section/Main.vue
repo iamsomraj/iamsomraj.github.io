@@ -19,17 +19,11 @@
       <!-- End: Image -->
 
       <!-- Begin: Name -->
-      <h1
-        class="text-center font-glacial-bold text-4xl font-bold uppercase tracking-wider text-dark dark:text-skin"
-      >
-        {{ name }}
-      </h1>
+      <primary-text :text="name" />
       <!-- End: Name -->
 
       <!-- Begin: Designation -->
-      <h2 class="text-2xl text-dark dark:text-skin">
-        {{ designation }}
-      </h2>
+      <secondary-text :text="designation" />
       <!-- End: Designation -->
 
       <!-- Begin: Description -->
@@ -74,10 +68,12 @@
 
 <script>
 import BaseLogo from '../user-interface/base-logo.vue'
-import PrimaryButton from '../user-interface/primary-button.vue'
-import SecondaryButton from '../user-interface/secondary-button.vue'
-import ThemeButton from '../user-interface/theme-button.vue'
 import BaseSection from '../user-interface/base-section.vue'
+import PrimaryButton from '../user-interface/primary-button.vue'
+import PrimaryText from '../user-interface/primary-text.vue'
+import SecondaryButton from '../user-interface/secondary-button.vue'
+import SecondaryText from '../user-interface/secondary-text.vue'
+import ThemeButton from '../user-interface/theme-button.vue'
 
 export default {
   name: 'HeroSection',
@@ -87,6 +83,8 @@ export default {
     SecondaryButton,
     ThemeButton,
     BaseSection,
+    PrimaryText,
+    SecondaryText,
   },
   computed: {
     name() {
