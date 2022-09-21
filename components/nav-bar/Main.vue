@@ -8,13 +8,12 @@
     <!-- End: Logo -->
 
     <!-- Begin: Theme and Get My CV Button -->
-    <div class="flex items-center justify-between space-x-4">
+    <div class="flex items-center justify-between space-x-2">
       <!-- Begin: Theme Button for Switching Modes -->
       <ThemeButton />
       <!-- End: Theme Button for Switching Modes -->
-
       <!-- Begin: Get My CV button -->
-      <secondary-button :label="'Get My CV'" />
+      <primary-button :label="'Get My CV'" />
       <!-- End: Get My CV button -->
     </div>
     <!-- End: Theme and Get My CV Button -->
@@ -24,7 +23,7 @@
 
 <script>
 import BaseLogo from '../user-interface/base-logo.vue'
-import SecondaryButton from '../user-interface/secondary-button.vue'
+import PrimaryButton from '../user-interface/primary-button.vue'
 import ThemeButton from '../user-interface/theme-button.vue'
 
 export default {
@@ -32,7 +31,7 @@ export default {
   components: {
     ThemeButton,
     BaseLogo,
-    SecondaryButton,
+    PrimaryButton,
   },
 }
 </script>

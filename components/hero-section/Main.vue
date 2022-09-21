@@ -35,7 +35,7 @@
       <!-- Begin: Buttons -->
       <div class="flex flex-col items-center justify-center space-y-4 pt-12">
         <!-- Begin: Primary Button -->
-        <primary-button :label="'Contact Me'" />
+        <secondary-button :label="'Contact Me'" />
         <!-- End: Primary Button -->
       </div>
       <!-- End: Buttons -->
@@ -46,17 +46,17 @@
 
 <script>
 import BaseSection from '../user-interface/base-section.vue'
-import PrimaryButton from '../user-interface/primary-button.vue'
 import PrimaryText from '../user-interface/primary-text.vue'
+import SecondaryButton from '../user-interface/secondary-button.vue'
 import SecondaryText from '../user-interface/secondary-text.vue'
 
 export default {
   name: 'HeroSection',
   components: {
-    PrimaryButton,
     BaseSection,
     PrimaryText,
     SecondaryText,
+    SecondaryButton,
   },
   computed: {
     name() {
