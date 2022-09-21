@@ -1,16 +1,8 @@
 <template>
   <base-section>
-    <div class="flex flex-col items-center justify-start">
-      <!-- Begin: Skill Section Header -->
-      <h2
-        class="mb-20 font-glacial-bold text-2xl font-bold tracking-wider text-dark dark:text-skin"
-      >
-        TECHNICAL SKILLS
-      </h2>
-      <!-- End: Skill Section Header -->
-
+    <div class="flex w-full flex-col items-center justify-start md:w-1/2">
       <!-- Begin: Skill List -->
-      <div class="grid gap-6 md:grid-cols-3">
+      <div class="grid w-full grid-cols-2 gap-6 md:grid-cols-1">
         <skill-item
           v-for="skill in filteredSkills"
           :key="skill.id"
