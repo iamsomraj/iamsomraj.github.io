@@ -1,10 +1,17 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
+import Header from '../components/Header';
 
 const Home: NextPage = () => {
   return (
-    <h1 className="container mx-auto px-4 py-2 text-center text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div>
+      <Head>
+        <title>{`Somraj's Portfolio`}</title>
+      </Head>
+
+      {/* Header */}
+      <Header />
+    </div>
   );
 };
 
