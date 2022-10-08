@@ -9,7 +9,7 @@ const Hero = (props: Props) => {
     delaySpeed: 2000,
   });
   return (
-    <div>
+    <div className="flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center">
       <BackgroundCircles />
       <h1>
         <span>{text}</span>
