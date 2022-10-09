@@ -3,14 +3,18 @@ import Head from 'next/head';
 import About from '../components/About';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import WorkExperience from '../components/WorkExperience';
 
 const Home: NextPage = () => {
+  // Title of The Page
+  const title = `Somraj's Portfolio`;
+
   return (
     <div className="z-0 h-screen snap-y snap-mandatory overflow-scroll bg-[rgb(36,36,36)] text-white">
       <Head>
-        <title>{`Somraj's Portfolio`}</title>
+        <title>{title}</title>
       </Head>
 
       {/* Begin: Header */}
@@ -40,6 +44,12 @@ const Home: NextPage = () => {
         <Skills />
       </section>
       {/* End: Skills */}
+
+      {/* Begin: Projects */}
+      <section id="projects" className="snap-center">
+        <Projects />
+      </section>
+      {/* End: Projects */}
     </div>
   );
 };
