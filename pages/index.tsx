@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   const title = `Somraj's Portfolio`;
 
   return (
-    <div className="z-0 h-screen snap-y snap-mandatory overflow-scroll bg-[rgb(36,36,36)] text-white">
+    <div className="z z-0 h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden overflow-y-scroll bg-[rgb(36,36,36)] text-white">
       <Head>
         <title>{title}</title>
       </Head>
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
       {/* End: Projects */}
 
       {/* Begin: Contact Me */}
-      <section id="contact-me" className="snap-start">
+      <section id="contact" className="snap-start">
         <ContactMe />
       </section>
       {/* End: Contact Me */}
