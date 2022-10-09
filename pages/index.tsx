@@ -40,13 +40,13 @@ const Home: NextPage = () => {
       {/* End: Work Experience */}
 
       {/* Begin: Skills */}
-      <section id="skills" className="snap-center">
+      <section id="skills" className="snap-start">
         <Skills />
       </section>
       {/* End: Skills */}
 
       {/* Begin: Projects */}
-      <section id="projects" className="snap-center">
+      <section id="projects" className="snap-start">
         <Projects />
       </section>
       {/* End: Projects */}

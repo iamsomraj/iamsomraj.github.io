@@ -12,7 +12,7 @@ const Skill = ({ directionLeft }: Props) => {
           opacity: 0,
         }}
         transition={{ duration: 1.5 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        animate={{ opacity: 1, x: 0 }}
         className="h-24 w-24 rounded-full border border-gray-500 object-cover object-center filter transition duration-300 ease-in-out group-hover:grayscale"
         src="https://avatars.githubusercontent.com/u/17177659?s=200&v=4"
       />
