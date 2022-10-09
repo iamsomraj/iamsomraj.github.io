@@ -34,7 +34,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       </Head>
 
       {/* Begin: Header */}
-      <Header />
+      <Header socials={socials} />
       {/* End: Header */}
 
       {/* Begin: Hero Section */}
