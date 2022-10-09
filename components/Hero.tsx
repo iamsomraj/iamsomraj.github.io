@@ -44,25 +44,25 @@ const Hero = (props: Props) => {
         {/* Begin: Navigation Buttons */}
         <div className="pt-5">
           <Link href="#about">
-            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40">
+            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
               About
             </button>
           </Link>
 
           <Link href="#experience">
-            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40">
+            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
               Experience
             </button>
           </Link>
 
           <Link href="#skills">
-            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40">
+            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
               Skills
             </button>
           </Link>
 
           <Link href="#projects">
-            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40">
+            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
               Projects
             </button>
           </Link>
