@@ -70,13 +70,13 @@ const ContactMe = (props: Props) => {
               {...register('name')}
               type="text"
               placeholder="Name"
-              className="w-full rounded-sm border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
+              className="w-full rounded-md border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
             />
             <input
               {...register('email')}
               type="email"
               placeholder="Email"
-              className="w-full rounded-sm border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
+              className="w-full rounded-md border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
             />
           </div>
 
@@ -84,13 +84,13 @@ const ContactMe = (props: Props) => {
             {...register('subject')}
             type="text"
             placeholder="Subject"
-            className="rounded-sm border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
+            className="rounded-md border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
           />
 
           <textarea
             {...register('message')}
             placeholder="Message"
-            className="rounded-sm border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
+            className="resize-none rounded-md border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
           ></textarea>
 
           <button
