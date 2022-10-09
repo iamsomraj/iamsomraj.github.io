@@ -7,7 +7,7 @@ const About = (props: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
+      className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-center space-y-5 px-10 text-center md:flex-row md:justify-evenly md:space-y-0 md:space-x-5 md:text-left"
     >
       {/* Begin: Section Title */}
       <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500">
@@ -23,12 +23,12 @@ const About = (props: Props) => {
         viewport={{ once: true }}
         src="https://avatars.githubusercontent.com/u/49872129?v=4"
         alt="Somraj Mukherjee"
-        className="-mb-20 h-16 w-16 flex-shrink-0 rounded-full object-cover md:mb-0 md:rounded-lg"
+        className="h-16 w-16 flex-shrink-0 rounded-full object-cover md:h-32 md:w-32"
       />
       {/* End: About Page Image */}
 
-      <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+      <div className='flex flex-col space-y-2'>
+        <h4 className="text-2xl font-semibold">
           Here is a{' '}
           <span className="underline decoration-primary-orange/50">little</span>{' '}
           background

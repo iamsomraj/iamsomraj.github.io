@@ -5,8 +5,8 @@ import Link from 'next/link';
 type Props = {};
 
 const Hero = (props: Props) => {
-  const [text, count] = useTypewriter({
-    words: [`Hi, The Name's Somraj Mukherjee`, 'Learner', 'Developer'],
+  const [attributes] = useTypewriter({
+    words: [`Developer`, 'Learner', 'Creator'],
     loop: true,
     delaySpeed: 2000,
   });
@@ -28,18 +28,24 @@ const Hero = (props: Props) => {
 
       {/* Begin: Personal Details */}
       <div className="z-20">
+        {/* Begin: Name */}
+        <h2 className="pb-2 text-lg uppercase tracking-tight text-gray-500">
+          Somraj Mukherjee
+        </h2>
+        {/* End: Name */}
+
         {/* Begin: Designation */}
-        <h2 className="pb-2 text-sm uppercase tracking-[15px] text-gray-500">
+        <h2 className="mx-auto max-w-xs pb-2 text-xs uppercase tracking-widest text-gray-500">
           Software Engineer
         </h2>
         {/* End: Designation */}
 
-        {/* Begin: Name */}
+        {/* Begin: Attributes */}
         <h1 className="px-10 text-3xl font-semibold">
-          <span>{text}</span>
+          <span>{attributes}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
-        {/* End: Name */}
+        {/* End: Attributes */}
 
         {/* Begin: Navigation Buttons */}
         <div className="pt-5">
