@@ -37,6 +37,12 @@ export default {
       type: 'boolean',
     },
     {
+      name: 'points',
+      title: 'Points',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
+    {
       name: 'technologies',
       title: 'Technologies',
       type: 'array',
