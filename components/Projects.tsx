@@ -18,7 +18,7 @@ const Projects = (props: Props) => {
       </h3>
       {/* End: Section Title */}
 
-      <div className="relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll">
+      <div className="relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-primary-orange/80">
         {projects.map((project, index) => (
           <div
             key={project}
