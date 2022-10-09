@@ -3,6 +3,7 @@ import Head from 'next/head';
 import About from '../components/About';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import WorkExperience from '../components/WorkExperience';
 
 const Home: NextPage = () => {
   return (
@@ -26,6 +27,12 @@ const Home: NextPage = () => {
         <About />
       </section>
       {/* End: About Section */}
+
+      {/* Begin: Work Experience */}
+      <section id="work-experience" className="snap-center">
+        <WorkExperience />
+      </section>
+      {/* End: Work Experience */}
     </div>
   );
 };
