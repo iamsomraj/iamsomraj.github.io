@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import About from '../components/About';
@@ -8,8 +8,22 @@ import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import WorkExperience from '../components/WorkExperience';
+import { IExperience, IPageInfo, IProject, ISkill, ISocial } from '../type';
+import { fetchExperiences } from '../utils/fetchExperiences';
+import { fetchPageInfo } from '../utils/fetchPageInfo';
+import { fetchProjects } from '../utils/fetchProjects';
+import { fetchSkills } from '../utils/fetchSkills';
+import { fetchSocials } from '../utils/fetchSocials';
 
-const Home: NextPage = () => {
+type Props = {
+  pageInfo: IPageInfo;
+  experiences: IExperience[];
+  projects: IProject[];
+  skills: ISkill[];
+  socials: ISocial[];
+};
+
+const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   // Title of The Page
   const title = `Somraj's Portfolio`;
 
@@ -77,3 +91,21 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: IPageInfo = await fetchPageInfo();
+  const experiences: IExperience[] = await fetchExperiences();
+  const projects: IProject[] = await fetchProjects();
+  const skills: ISkill[] = await fetchSkills();
+  const socials: ISocial[] = await fetchSocials();
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      projects,
+      skills,
+      socials,
+    },
+    revalidate: 10,
+  };
+};
