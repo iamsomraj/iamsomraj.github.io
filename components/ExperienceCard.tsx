@@ -7,7 +7,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <article className="flex max-h-[70vh] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-[#292929] p-10 opacity-40 transition-opacity duration-200 hover:opacity-100">
+    <article className="flex max-h-[70vh] w-screen cursor-pointer flex-col items-center space-y-7 overflow-hidden overflow-y-scroll rounded-lg bg-[#292929] p-10 opacity-40 transition-opacity duration-200 hover:opacity-100">
       {experience.companyImage && (
         <motion.img
           initial={{ y: -100, opacity: 0 }}
@@ -23,14 +23,14 @@ const ExperienceCard = ({ experience }: Props) => {
       <div className="px-0 md:px-10">
         <h4 className="text-3xl font-light">{experience.jobTitle}</h4>
         <p className="mt-1 text-2xl font-bold">{experience.company}</p>
-        <div className="my-2 flex space-x-2">
+        <div className="my-2 flex flex-wrap">
           {/* Tech Used */}
           {experience.technologies.map(
             (tech, index) =>
               tech.image && (
                 <motion.img
                   key={index}
-                  className="h-10 w-10 rounded-full"
+                  className="m-2 h-10 w-10 flex-shrink-0 rounded-full object-cover object-center"
                   src={urlFor(tech.image).url()}
                   alt={tech.title}
                 />

@@ -20,7 +20,7 @@ const WorkExperience = ({ experiences }: Props) => {
       {/* End: Section Title */}
 
       {/* Begin: Work Experience List */}
-      <div className="flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll p-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-primary-orange/80">
+      <div className="flex w-fit snap-x snap-mandatory space-x-5 overflow-x-scroll p-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-primary-orange/80">
         {experiences.map((experience, index) => (
           <ExperienceCard experience={experience} key={index} />
         ))}
