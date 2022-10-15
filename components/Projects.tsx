@@ -24,21 +24,19 @@ const Projects = (props: Props) => {
             key={project}
             className="flex h-screen w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-20"
           >
-            <motion.img
+            <motion.div
               initial={{ y: -300, opacity: 0.5 }}
               transition={{ duration: 1.2 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              src="https://avatars.githubusercontent.com/u/17177659?s=200&v=4"
-              alt="project image"
-              width={100}
-              height={100}
-              className="h-24 w-24 rounded-full border border-gray-500 object-cover object-center"
-            />
+              className="flex h-48 w-48 items-center justify-center overflow-hidden break-words rounded-full border border-gray-500 text-left text-5xl uppercase tracking-widest"
+            >
+              Title of The Project
+            </motion.div>
 
             <div className="max-w-6xl space-y-10 px-0 md:px-10">
               <h4>
-                <span className="underline decoration-primary-orange/50">
+                <span className="mr-2 underline decoration-primary-orange/50">
                   Case Study {index + 1} of {projects.length}:
                 </span>
                 UPS Clone
