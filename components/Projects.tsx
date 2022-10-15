@@ -52,7 +52,7 @@ const Projects = ({ projects }: Props) => {
                     tech.image && (
                       <motion.img
                         key={index}
-                        className="h-10 w-10 rounded-full"
+                        className="h-10 w-10 flex-shrink-0 rounded-full object-cover object-center"
                         src={urlFor(tech.image).url()}
                         alt={tech.title}
                       />
