@@ -1,6 +1,7 @@
 import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import About from '../components/About';
 import ContactMe from '../components/ContactMe';
 import Header from '../components/Header';
@@ -8,6 +9,7 @@ import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import WorkExperience from '../components/WorkExperience';
+import { urlFor } from '../sanity';
 import { IExperience, IPageInfo, IProject, ISkill, ISocial } from '../type';
 import { fetchExperiences } from '../utils/fetchExperiences';
 import { fetchPageInfo } from '../utils/fetchPageInfo';
@@ -45,13 +47,13 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       {/* Begin: About Section */}
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
       {/* End: About Section */}
 
       {/* Begin: Work Experience */}
       <section id="work-experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experiences={experiences} />
       </section>
       {/* End: Work Experience */}
 
@@ -75,15 +77,19 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       {/* Begin: Footer */}
       <footer className="sticky bottom-5 w-full cursor-pointer">
-        <div className="flex items-center justify-center">
-          <Image
-            height={40}
-            width={40}
-            className="h-10 w-10 cursor-pointer rounded-full grayscale filter hover:grayscale-0"
-            src="https://avatars.githubusercontent.com/u/49872129?v=4"
-            alt="footer"
-          />
-        </div>
+        <Link href="#contact">
+          <div className="flex items-center justify-center">
+            {pageInfo.heroImage && (
+              <Image
+                height={40}
+                width={40}
+                className="h-10 w-10 cursor-pointer rounded-full object-cover object-center grayscale filter hover:grayscale-0"
+                src={urlFor(pageInfo.heroImage).url()}
+                alt="footer"
+              />
+            )}
+          </div>
+        </Link>
       </footer>
       {/* End: Footer */}
     </div>

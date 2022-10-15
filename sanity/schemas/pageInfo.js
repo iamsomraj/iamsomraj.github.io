@@ -23,12 +23,12 @@ export default {
     },
     {
       name: 'backgroundInformation',
-      title: 'BackgroundInformation',
+      title: 'Background Information',
       type: 'string',
     },
     {
-      name: 'profilePic',
-      title: 'ProfilePic',
+      name: 'profilePicture',
+      title: 'Profile Picture',
       type: 'image',
       options: {
         hotspot: true,
@@ -36,7 +36,7 @@ export default {
     },
     {
       name: 'phoneNumber',
-      title: 'PhoneNumber',
+      title: 'Phone Number',
       type: 'string',
     },
     {

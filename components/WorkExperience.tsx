@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
+import { IExperience } from '../type';
 import ExperienceCard from './ExperienceCard';
-type Props = {};
+type Props = {
+  experiences: IExperience[];
+};
 
-const WorkExperience = (props: Props) => {
+const WorkExperience = ({ experiences }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,25 +20,10 @@ const WorkExperience = (props: Props) => {
       {/* End: Section Title */}
 
       {/* Begin: Work Experience List */}
-      <div className="flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll p-10">
-        {/* Begin: Experience Card */}
-        <ExperienceCard />
-        {/* End: Experience Card */}
-        {/* Begin: Experience Card */}
-        <ExperienceCard />
-        {/* End: Experience Card */}
-        {/* Begin: Experience Card */}
-        <ExperienceCard />
-        {/* End: Experience Card */}
-        {/* Begin: Experience Card */}
-        <ExperienceCard />
-        {/* End: Experience Card */}
-        {/* Begin: Experience Card */}
-        <ExperienceCard />
-        {/* End: Experience Card */}
-        {/* Begin: Experience Card */}
-        <ExperienceCard />
-        {/* End: Experience Card */}
+      <div className="flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll p-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-primary-orange/80">
+        {experiences.map((experience, index) => (
+          <ExperienceCard experience={experience} key={index} />
+        ))}
       </div>
       {/* End: Work Experience List */}
     </motion.div>
