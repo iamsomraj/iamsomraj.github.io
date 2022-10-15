@@ -1,10 +1,13 @@
+import { groq } from 'next-sanity';
+import { sanityClient } from '../sanity';
 import { IExperience } from '../type';
 
+const query = groq`*[_type == "experience"] {
+  ...,
+  technologies[]->
+}`;
+
 export const fetchExperiences = async (): Promise<IExperience[]> => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/experiences`
-  );
-  const data = await res.json();
-  const experiences: IExperience[] = data.experiences;
+  const experiences: IExperience[] = await sanityClient.fetch(query);
   return experiences;
 };
