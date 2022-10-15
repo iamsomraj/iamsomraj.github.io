@@ -36,7 +36,7 @@ const Hero = ({ pageInfo }: Props) => {
       {/* Begin: Personal Details */}
       <div className="z-20">
         {/* Begin: Name */}
-        <h2 className="pb-2 text-2xl uppercase tracking-tight text-gray-500">
+        <h2 className="pb-2 text-3xl uppercase tracking-tighter text-white">
           {pageInfo?.name}
         </h2>
         {/* End: Name */}
@@ -48,7 +48,7 @@ const Hero = ({ pageInfo }: Props) => {
         {/* End: Designation */}
 
         {/* Begin: Attributes */}
-        <h1 className="px-10 text-3xl font-semibold">
+        <h1 className="px-10 text-4xl font-semibold">
           <span>{attributes}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
