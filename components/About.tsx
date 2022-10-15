@@ -30,7 +30,7 @@ const About = ({ pageInfo }: Props) => {
             viewport={{ once: true }}
             src={urlFor(pageInfo?.profilePicture).url()}
             alt={pageInfo.name}
-            className="h-32 w-32 flex-shrink-0 rounded-full object-cover md:h-48 md:w-48"
+            className="h-32 w-32 flex-shrink-0 rounded-full object-cover md:h-48 md:w-48 md:rounded-lg"
           />
         )}
       </div>
