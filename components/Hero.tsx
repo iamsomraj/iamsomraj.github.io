@@ -2,11 +2,16 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from './BackgroundCircles';
 import Image from 'next/image';
 import Link from 'next/link';
-type Props = {};
+import { IPageInfo } from '../type';
+import { urlFor } from '../sanity';
 
-const Hero = (props: Props) => {
+type Props = {
+  pageInfo: IPageInfo;
+};
+
+const Hero = ({ pageInfo }: Props) => {
   const [attributes] = useTypewriter({
-    words: [`Developer`, 'Learner', 'Creator'],
+    words: [...pageInfo?.attributes],
     loop: true,
     delaySpeed: 2000,
   });
@@ -17,26 +22,28 @@ const Hero = (props: Props) => {
       {/* End: Background Circles */}
 
       {/* Begin: Profile Picture */}
-      <Image
-        className="relative mx-auto h-32 w-32 rounded-full object-cover"
-        width={128}
-        height={128}
-        src="https://avatars.githubusercontent.com/u/49872129?v=4"
-        alt="Somraj Mukherjee"
-      />
+      {pageInfo?.heroImage && (
+        <Image
+          className="relative mx-auto h-32 w-32 rounded-full object-cover"
+          width={128}
+          height={128}
+          src={urlFor(pageInfo?.heroImage).url()}
+          alt={pageInfo.name}
+        />
+      )}
       {/* End: Profile Picture */}
 
       {/* Begin: Personal Details */}
       <div className="z-20">
         {/* Begin: Name */}
-        <h2 className="pb-2 text-lg uppercase tracking-tight text-gray-500">
-          Somraj Mukherjee
+        <h2 className="pb-2 text-2xl uppercase tracking-tight text-gray-500">
+          {pageInfo?.name}
         </h2>
         {/* End: Name */}
 
         {/* Begin: Designation */}
         <h2 className="mx-auto max-w-xs pb-2 text-xs uppercase tracking-widest text-gray-500">
-          Software Engineer
+          {pageInfo?.role}
         </h2>
         {/* End: Designation */}
 

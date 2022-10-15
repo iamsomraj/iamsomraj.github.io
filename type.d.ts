@@ -23,6 +23,7 @@ export interface IPageInfo extends ISanityBody {
   name: string;
   phoneNumber: string;
   profilePicture: ISanityImage;
+  attributes: string[];
 }
 
 export interface IExperience extends ISanityBody {
