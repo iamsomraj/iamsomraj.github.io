@@ -1,10 +1,13 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { IProject } from '../type';
+import { urlFor } from '../sanity';
 
-type Props = {};
+type Props = {
+  projects: IProject[];
+};
 
-const Projects = (props: Props) => {
-  const projects = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const Projects = ({ projects }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -21,17 +24,17 @@ const Projects = (props: Props) => {
       <div className="relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-primary-orange/80">
         {projects.map((project, index) => (
           <div
-            key={project}
+            key={index}
             className="flex h-screen w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-20"
           >
             <motion.div
-              initial={{ y: -300, opacity: 0.5 }}
+              initial={{ opacity: 0 }}
               transition={{ duration: 1.2 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex h-48 w-48 items-center justify-center overflow-hidden break-words rounded-full border border-gray-500 text-left text-5xl uppercase tracking-widest"
+              className="flex items-center justify-center overflow-hidden break-words rounded-lg px-4 py-6 text-left text-5xl lowercase tracking-widest text-white  underline decoration-primary-orange/50"
             >
-              Title of The Project
+              {project.title}
             </motion.div>
 
             <div className="max-w-6xl space-y-10 px-0 md:px-10">
@@ -39,14 +42,26 @@ const Projects = (props: Props) => {
                 <span className="mr-2 underline decoration-primary-orange/50">
                   Case Study {index + 1} of {projects.length}:
                 </span>
-                UPS Clone
+                {project.title}
               </h4>
 
-              <p className="text-center text-lg md:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati ab ipsam mollitia officia beatae consequuntur
-                voluptatem culpa commodi, odio iste quos eaque temporibus
-                impedit esse doloribus, ratione quasi repudiandae laboriosam.
+              <div className="flex space-x-2">
+                {/* Tech Used */}
+                {project.technologies.map(
+                  (tech, index) =>
+                    tech.image && (
+                      <motion.img
+                        key={index}
+                        className="h-10 w-10 rounded-full"
+                        src={urlFor(tech.image).url()}
+                        alt={tech.title}
+                      />
+                    )
+                )}
+              </div>
+
+              <p className="whitespace-pre-line text-center text-base leading-relaxed md:text-left">
+                {project.summary}
               </p>
             </div>
           </div>

@@ -61,7 +61,6 @@ export interface ISkill extends ISanityBody {
 export interface IProject extends ISanityBody {
   _type: 'project';
   title: string;
-  image: ISanityImage;
   linkToBuild: string;
   summary: string;
   technologies: ITechnology[];
