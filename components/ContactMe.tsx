@@ -31,76 +31,67 @@ const ContactMe = (props: Props) => {
   });
 
   return (
-    <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-center px-10 text-center md:flex-row md:justify-evenly md:text-left">
+    <div className="flex h-screen max-w-full flex-col items-center justify-center space-y-6 px-10">
       {/* Begin: Section Title */}
-      <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500">
+      <h3 className="text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4">
         Contact
       </h3>
       {/* End: Section Title */}
 
-      <div className="absolute top-32 flex flex-col space-y-10">
-        <h4 className="text-center text-xl font-semibold">
-          I have got just what you need.{' '}
-          <span className="underline decoration-primary-orange/50">
-            Lets talk.
-          </span>
-        </h4>
+      <div className="flex flex-col items-start justify-start space-y-2">
+        <div className="flex items-center justify-center space-x-5">
+          <PhoneIcon className="h-10 w-10 rounded-full bg-mint-green p-2 text-dark-gray" />
+          <p className="text-base">+91 7003751072</p>
+        </div>
+        <div className="flex items-center justify-center space-x-5">
+          <EnvelopeIcon className="h-10 w-10 rounded-full bg-mint-green p-2 text-dark-gray" />
+          <p className="text-base">iamsomraj@gmail.com</p>
+        </div>
+        <div className="flex items-center justify-center space-x-5">
+          <MapPinIcon className="h-10 w-10 rounded-full bg-mint-green p-2 text-dark-gray" />
+          <p className="text-base">Kolkata, India</p>
+        </div>
+      </div>
 
-        <div>
-          <div className="flex items-center justify-center space-x-5">
-            <PhoneIcon className="h-7 w-7 animate-pulse text-primary-orange" />
-            <p className="text-base">+91 7003751072</p>
-          </div>
-          <div className="flex items-center justify-center space-x-5">
-            <EnvelopeIcon className="h-7 w-7 animate-pulse text-primary-orange" />
-            <p className="text-base">iamsomraj@gmail.com</p>
-          </div>
-          <div className="flex items-center justify-center space-x-5">
-            <MapPinIcon className="h-7 w-7 animate-pulse text-primary-orange" />
-            <p className="text-base">Kolkata, India</p>
-          </div>
+      <form
+        onSubmit={onSubmit}
+        className="flex w-full max-w-md flex-col space-y-1 px-10"
+      >
+        <div className="flex w-full space-x-2">
+          <input
+            {...register('name')}
+            type="text"
+            placeholder="Name"
+            className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray w-full rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all  focus:border-dark-gray"
+          />
+          <input
+            {...register('email')}
+            type="email"
+            placeholder="Email"
+            className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray w-full rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all  focus:border-dark-gray"
+          />
         </div>
 
-        <form
-          onSubmit={onSubmit}
-          className="mx-auto flex w-full flex-col space-y-2 px-10"
+        <input
+          {...register('subject')}
+          type="text"
+          placeholder="Subject"
+          className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all  focus:border-dark-gray"
+        />
+
+        <textarea
+          {...register('message')}
+          placeholder="Message"
+          className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray resize-none rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all  focus:border-dark-gray"
+        ></textarea>
+
+        <button
+          type="submit"
+          className="rounded-md bg-dark-gray py-5 px-10 text-lg font-bold text-off-white"
         >
-          <div className="flex w-full space-x-2">
-            <input
-              {...register('name')}
-              type="text"
-              placeholder="Name"
-              className="w-full rounded-md border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
-            />
-            <input
-              {...register('email')}
-              type="email"
-              placeholder="Email"
-              className="w-full rounded-md border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
-            />
-          </div>
-
-          <input
-            {...register('subject')}
-            type="text"
-            placeholder="Subject"
-            className="rounded-md border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
-          />
-
-          <textarea
-            {...register('message')}
-            placeholder="Message"
-            className="resize-none rounded-md border-b border-[#242424] bg-slate-400/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-primary-orange/40 focus:text-primary-orange/40  hover:text-primary-orange/40"
-          ></textarea>
-
-          <button
-            type="submit"
-            className="rounded-md bg-primary-orange py-5 px-10 text-lg font-bold text-black"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+          Submit
+        </button>
+      </form>
     </div>
   );
 };
