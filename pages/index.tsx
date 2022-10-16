@@ -30,7 +30,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   const title = `Somraj's Portfolio`;
 
   return (
-    <div className="z-0 h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden overflow-y-scroll scroll-smooth bg-[rgb(36,36,36)] text-white scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-primary-orange/80">
+    <div className="h-screen overflow-scroll overflow-x-hidden overflow-y-scroll scroll-smooth bg-off-white text-dark-gray scrollbar scrollbar-track-mint-green/80 scrollbar-thumb-dark-gray/80">
       <Head>
         <title>{title}</title>
       </Head>
