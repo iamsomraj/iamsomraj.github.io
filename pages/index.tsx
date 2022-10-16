@@ -76,7 +76,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       {/* End: Contact Me */}
 
       {/* Begin: Footer */}
-      <footer className="sticky bottom-5 w-full cursor-pointer">
+      <footer className="sticky bottom-5 z-50 w-full cursor-pointer">
         <Link href="#contact">
           <div className="flex items-center justify-center">
             {pageInfo.heroImage && (

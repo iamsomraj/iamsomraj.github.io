@@ -71,7 +71,7 @@ const Projects = ({ projects }: Props) => {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-center text-base leading-relaxed text-dark-gray"
+                className="text-center text-base leading-relaxed text-dark-gray max-w-md"
               >
                 {project.summary}
               </motion.div>
