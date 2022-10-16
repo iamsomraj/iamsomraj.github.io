@@ -29,7 +29,7 @@ const Skills = ({ skills }: Props) => {
             skill.image && (
               <Skill
                 skill={skill}
-                key={index}
+                key={skill._id}
                 directionLeft={index < skills.length / 2}
               />
             )

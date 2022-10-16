@@ -20,14 +20,14 @@ const Header = ({ socials }: Props) => {
           }}
           animate={{ x: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1.5 }}
-          className="flex flex-row items-center"
+          className="flex flex-row items-center space-x-2"
         >
           {socials.map((social) => (
             <SocialIcon
               key={social._id}
               url={social.url}
-              fgColor="gray"
-              bgColor="transparent"
+              fgColor="#323232"
+              bgColor="#dfeeee"
             />
           ))}
         </motion.div>
@@ -50,17 +50,17 @@ const Header = ({ socials }: Props) => {
             transition={{
               duration: 1.5,
             }}
-            className="flex cursor-pointer flex-row items-center text-gray-300"
+            className="flex cursor-pointer flex-row items-center space-x-2 text-dark-gray"
           >
             {/* Begin: Mail Icon */}
             <SocialIcon
               className="cursor-pointer"
               network="email"
-              fgColor="gray"
-              bgColor="transparent"
+              fgColor="#323232"
+              bgColor="#dfeeee"
             />
             {/* End: Mail Icon */}
-            <p className="hidden text-sm uppercase text-gray-400 md:inline-flex">
+            <p className="hidden text-sm uppercase md:inline-flex">
               Get in Touch
             </p>
           </motion.div>

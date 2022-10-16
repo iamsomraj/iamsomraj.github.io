@@ -24,7 +24,7 @@ const Projects = ({ projects }: Props) => {
       <div className="relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-primary-orange/80">
         {projects.map((project, index) => (
           <div
-            key={index}
+            key={project._id}
             className="flex h-screen w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-20"
           >
             <motion.div
@@ -51,7 +51,7 @@ const Projects = ({ projects }: Props) => {
                   (tech, index) =>
                     tech.image && (
                       <motion.img
-                        key={index}
+                        key={tech._id}
                         className="h-10 w-10 flex-shrink-0 rounded-full object-cover object-center"
                         src={urlFor(tech.image).url()}
                         alt={tech.title}

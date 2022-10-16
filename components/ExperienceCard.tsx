@@ -29,7 +29,7 @@ const ExperienceCard = ({ experience }: Props) => {
             (tech, index) =>
               tech.image && (
                 <motion.img
-                  key={index}
+                  key={tech._id}
                   className="m-2 h-10 w-10 flex-shrink-0 rounded-full object-cover object-center"
                   src={urlFor(tech.image).url()}
                   alt={tech.title}
