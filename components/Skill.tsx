@@ -12,7 +12,7 @@ const Skill = ({ skill, directionLeft }: Props) => {
       {skill.image && (
         <motion.img
           initial={{
-            x: directionLeft ? -200 : 200,
+            x: directionLeft ? -50 : 50,
             opacity: 0,
           }}
           transition={{ duration: 1.5 }}

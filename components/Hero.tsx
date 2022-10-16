@@ -16,7 +16,7 @@ const Hero = ({ pageInfo }: Props) => {
     delaySpeed: 2000,
   });
   return (
-    <div className="relative snap-start flex h-screen flex-col items-center justify-center overflow-hidden text-center">
+    <div className="relative flex h-screen snap-start flex-col items-center justify-center overflow-hidden text-center">
       {/* Begin: Background Circles */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -71,27 +71,51 @@ const Hero = ({ pageInfo }: Props) => {
         {/* Begin: Navigation Buttons */}
         <div className="flex flex-wrap items-center justify-center">
           <Link href="#about">
-            <button className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
+            <motion.button
+              initial={{ x: -200, opacity: 0.5 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
+              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40"
+            >
               About
-            </button>
+            </motion.button>
           </Link>
 
           <Link href="#experience">
-            <button className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
+            <motion.button
+              initial={{ x: -200, opacity: 0.5 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
+              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40"
+            >
               Experience
-            </button>
+            </motion.button>
           </Link>
 
           <Link href="#skills">
-            <button className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
+            <motion.button
+              initial={{ x: 200, opacity: 0.5 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
+              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40"
+            >
               Skills
-            </button>
+            </motion.button>
           </Link>
 
           <Link href="#projects">
-            <button className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
+            <motion.button
+              initial={{ x: 200, opacity: 0.5 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
+              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40"
+            >
               Projects
-            </button>
+            </motion.button>
           </Link>
         </div>
         {/* End: Navigation Buttons */}
