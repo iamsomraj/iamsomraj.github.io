@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { SocialIcon } from 'react-social-icons';
 import { urlFor } from '../sanity';
 import { IProject } from '../type';
 
@@ -28,6 +29,21 @@ const Projects = ({ projects }: Props) => {
               className="flex items-center justify-center overflow-hidden break-words rounded-lg px-4 py-6 text-left text-5xl lowercase tracking-widest text-dark-gray"
             >
               {project.title}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 1.2 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="cursor-pointer"
+            >
+              <SocialIcon
+                url={project.linkToBuild}
+                fgColor="#323232"
+                bgColor="transparent"
+                className="cursor-pointer"
+              />
             </motion.div>
 
             <div className="max-w-6xl space-y-10 px-0 md:px-10">
