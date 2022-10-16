@@ -11,15 +11,15 @@ const Skills = ({ skills }: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="relative mx-auto flex min-h-screen flex-col items-center justify-center text-center md:flex-row md:text-left"
+      className="flex h-screen flex-col items-center justify-center space-y-2 px-10 md:space-y-8"
     >
       {/* Begin: Section Title */}
-      <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500">
+      <h3 className="text-center text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4">
         Skills
       </h3>
       {/* End: Section Title */}
 
-      <h3 className="absolute top-36 text-sm uppercase tracking-[3px] text-gray-500">
+      <h3 className="text-center text-sm uppercase tracking-wider text-gray-500">
         Hover over a skill for current proficiency
       </h3>
 
