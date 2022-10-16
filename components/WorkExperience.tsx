@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { urlFor } from '../sanity';
 import { IExperience } from '../type';
 import ExperienceCard from './ExperienceCard';
 type Props = {
