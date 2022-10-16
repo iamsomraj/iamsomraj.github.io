@@ -36,7 +36,7 @@ const Hero = ({ pageInfo }: Props) => {
       {/* End: Background Circles */}
 
       {/* Begin: Personal Details */}
-      <div className="absolute top-36 flex flex-col items-center justify-center space-y-4">
+      <div className="absolute top-36 flex flex-col items-center justify-center space-y-4 px-10">
         {/* Begin: Profile Picture */}
         {pageInfo?.heroImage && (
           <Image
