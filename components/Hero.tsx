@@ -1,9 +1,9 @@
-import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import BackgroundCircles from './BackgroundCircles';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IPageInfo } from '../type';
+import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { urlFor } from '../sanity';
+import { IPageInfo } from '../type';
 
 type Props = {
   pageInfo: IPageInfo;
@@ -16,66 +16,80 @@ const Hero = ({ pageInfo }: Props) => {
     delaySpeed: 2000,
   });
   return (
-    <div className="flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center">
+    <div className="relative snap-start flex h-screen flex-col items-center justify-center overflow-hidden text-center">
       {/* Begin: Background Circles */}
-      <BackgroundCircles />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          scale: [1, 2, 2, 3, 1],
+          opacity: [0.1, 0.2, 0.4, 0.8, 0.1, 1],
+          borderRadius: ['20%', '20%', '50%', '80%', '20%'],
+        }}
+        transition={{
+          duration: 2.5,
+        }}
+        className="absolute top-32 flex flex-col items-center justify-center"
+      >
+        <div className="absolute top-6 h-36 w-36 animate-ping rounded-full border border-dark-gray/10"></div>
+        <div className="absolute top-0 h-40 w-40 animate-pulse rounded-full border border-dark-gray/20"></div>
+      </motion.div>
       {/* End: Background Circles */}
 
-      {/* Begin: Profile Picture */}
-      {pageInfo?.heroImage && (
-        <Image
-          className="relative mx-auto h-32 w-32 rounded-full object-cover"
-          width={128}
-          height={128}
-          src={urlFor(pageInfo?.heroImage).url()}
-          alt={pageInfo.name}
-        />
-      )}
-      {/* End: Profile Picture */}
-
       {/* Begin: Personal Details */}
-      <div className="z-20">
+      <div className="absolute top-36 flex flex-col items-center justify-center space-y-4">
+        {/* Begin: Profile Picture */}
+        {pageInfo?.heroImage && (
+          <Image
+            className="h-32 w-32 flex-shrink-0 rounded-full object-cover object-center"
+            width={128}
+            height={128}
+            src={urlFor(pageInfo?.heroImage).url()}
+            alt={pageInfo.name}
+          />
+        )}
+        {/* End: Profile Picture */}
+
         {/* Begin: Name */}
-        <h2 className="pb-2 text-3xl uppercase tracking-tighter text-white">
+        <h2 className="text-3xl uppercase tracking-tighter text-dark-gray">
           {pageInfo?.name}
         </h2>
         {/* End: Name */}
 
         {/* Begin: Designation */}
-        <h2 className="mx-auto max-w-xs pb-2 text-xs uppercase tracking-widest text-gray-500">
+        <h2 className="mx-auto max-w-xs text-xs uppercase tracking-widest text-dark-gray">
           {pageInfo?.role}
         </h2>
         {/* End: Designation */}
 
         {/* Begin: Attributes */}
-        <h1 className="px-10 text-4xl font-semibold">
+        <h1 className="text-4xl font-semibold">
           <span>{attributes}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
         {/* End: Attributes */}
 
         {/* Begin: Navigation Buttons */}
-        <div className="pt-5">
+        <div className="flex flex-wrap items-center justify-center">
           <Link href="#about">
-            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
+            <button className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
               About
             </button>
           </Link>
 
           <Link href="#experience">
-            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
+            <button className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
               Experience
             </button>
           </Link>
 
           <Link href="#skills">
-            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
+            <button className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
               Skills
             </button>
           </Link>
 
           <Link href="#projects">
-            <button className="rounded-full border border-[#242424] px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
+            <button className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40">
               Projects
             </button>
           </Link>
