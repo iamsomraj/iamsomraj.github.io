@@ -12,10 +12,10 @@ const About = ({ pageInfo }: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex h-screen flex-col items-center justify-center space-y-8"
+      className="flex h-screen flex-col items-center justify-center space-y-2 md:space-y-8"
     >
       {/* Begin: Section Title */}
-      <h3 className="text-2xl uppercase tracking-[20px] text-gray-500">
+      <h3 className="text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4">
         About
       </h3>
       {/* End: Section Title */}
@@ -43,20 +43,18 @@ const About = ({ pageInfo }: Props) => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
           viewport={{ once: true }}
-          className="flex max-w-lg flex-col space-y-2 px-10"
+          className="flex max-w-lg flex-col space-y-2 px-10 text-dark-gray"
         >
-          <h4 className="text-center text-3xl font-semibold md:text-left">
+          <h4 className="text-center text-2xl font-semibold md:text-left">
             Here is a{' '}
-            <span className="underline decoration-primary-orange/50">
-              little
-            </span>{' '}
+            <span className="rounded-lg bg-mint-green py-1 px-2">little</span>{' '}
             background
           </h4>
           <motion.p
             initial={{ opacity: 0.5 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="break-words text-center text-sm leading-loose md:text-left"
+            className="break-words text-center text-xs leading-loose md:text-left md:text-sm"
           >
             {pageInfo?.backgroundInformation}
           </motion.p>
