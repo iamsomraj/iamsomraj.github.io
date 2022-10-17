@@ -64,7 +64,7 @@ const Hero = ({ pageInfo }: Props) => {
         {/* Begin: Attributes */}
         <h1 className="text-4xl font-semibold">
           <span>{attributes}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <Cursor cursorColor="#dfeeee" />
         </h1>
         {/* End: Attributes */}
 
