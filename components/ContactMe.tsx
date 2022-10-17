@@ -1,4 +1,5 @@
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import { motion } from 'framer-motion';
 
 type Props = {};
 import { useForm, Resolver } from 'react-hook-form';
@@ -12,15 +13,31 @@ type FormValues = {
 
 const resolver: Resolver<FormValues> = async (values) => {
   return {
-    values: values.name ? values : {},
-    errors: !values.name
-      ? {
-          name: {
-            type: 'required',
-            message: 'This is required.',
-          },
-        }
-      : {},
+    values:
+      values.name && values.email && values.message && values.subject
+        ? values
+        : {},
+    errors:
+      !values.name || !values.email || !values.message || !values.subject
+        ? {
+            name: {
+              type: 'required',
+              message: 'This is required.',
+            },
+            email: {
+              type: 'required',
+              message: 'This is required.',
+            },
+            subject: {
+              type: 'required',
+              message: 'This is required.',
+            },
+            message: {
+              type: 'required',
+              message: 'This is required.',
+            },
+          }
+        : {},
   };
 };
 
@@ -38,7 +55,16 @@ const ContactMe = (props: Props) => {
       </h3>
       {/* End: Section Title */}
 
-      <div className="flex flex-col items-start justify-start space-y-2">
+      <motion.div
+        initial={{
+          x: 50,
+          opacity: 0,
+        }}
+        transition={{ duration: 1.2 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-start justify-start space-y-2"
+      >
         <div className="flex items-center justify-center space-x-5">
           <PhoneIcon className="h-10 w-10 rounded-full bg-mint-green p-2 text-dark-gray" />
           <p className="text-base">+91 7003751072</p>
@@ -51,7 +77,7 @@ const ContactMe = (props: Props) => {
           <MapPinIcon className="h-10 w-10 rounded-full bg-mint-green p-2 text-dark-gray" />
           <p className="text-base">Kolkata, India</p>
         </div>
-      </div>
+      </motion.div>
 
       <form
         onSubmit={onSubmit}

@@ -51,10 +51,18 @@ const Projects = ({ projects }: Props) => {
                 Project {index + 1} of {projects.length}
               </h4>
 
-              <div className="flex space-x-2">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                transition={{ duration: 1.2 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="flex space-x-2"
+              >
                 {/* Tech Used */}
                 {project.technologies.map(
-                  (tech, index) =>
+                  (tech) =>
                     tech.image && (
                       <motion.img
                         key={tech._id}
@@ -64,14 +72,14 @@ const Projects = ({ projects }: Props) => {
                       />
                     )
                 )}
-              </div>
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-center text-base leading-relaxed text-dark-gray max-w-md"
+                className="max-w-md text-center text-base leading-relaxed text-dark-gray"
               >
                 {project.summary}
               </motion.div>
