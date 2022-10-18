@@ -1,8 +1,8 @@
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
+import { Resolver, useForm } from 'react-hook-form';
 
 type Props = {};
-import { useForm, Resolver } from 'react-hook-form';
 
 type FormValues = {
   name: string;
@@ -113,7 +113,7 @@ const ContactMe = (props: Props) => {
 
         <button
           type="submit"
-          className="rounded-md bg-dark-gray py-5 px-10 text-lg font-bold text-off-white"
+          className="rounded-md bg-dark-gray py-3 px-10 text-lg font-bold text-off-white"
         >
           Submit
         </button>

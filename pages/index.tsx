@@ -1,6 +1,6 @@
+import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline';
 import type { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import About from '../components/About';
 import ContactMe from '../components/ContactMe';
@@ -9,7 +9,6 @@ import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import WorkExperience from '../components/WorkExperience';
-import { urlFor } from '../sanity';
 import { IExperience, IPageInfo, IProject, ISkill, ISocial } from '../type';
 import { fetchExperiences } from '../utils/fetchExperiences';
 import { fetchPageInfo } from '../utils/fetchPageInfo';
@@ -79,15 +78,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       <footer className="sticky bottom-5 z-50 w-full cursor-pointer">
         <Link href="#contact">
           <div className="flex items-center justify-center">
-            {pageInfo.heroImage && (
-              <Image
-                height={40}
-                width={40}
-                className="h-10 w-10 cursor-pointer rounded-full object-cover object-center grayscale filter hover:grayscale-0"
-                src={urlFor(pageInfo.heroImage).url()}
-                alt="footer"
-              />
-            )}
+            <ChevronDoubleDownIcon className="h-10 w-10 animate-bounce rounded-full bg-mint-green p-2 text-dark-gray shadow" />
           </div>
         </Link>
       </footer>
