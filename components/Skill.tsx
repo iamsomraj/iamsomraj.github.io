@@ -8,16 +8,18 @@ type Props = {
 
 const Skill = ({ skill, directionLeft }: Props) => {
   return (
-    <div className="group relative flex cursor-pointer">
+    <motion.div
+      initial={{
+        x: directionLeft ? -50 : 50,
+        opacity: 0,
+      }}
+      transition={{ duration: 1.5 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="group relative flex cursor-pointer"
+    >
       {skill.image && (
-        <motion.img
-          initial={{
-            x: directionLeft ? -50 : 50,
-            opacity: 0,
-          }}
-          transition={{ duration: 1.5 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+        <img
           className="h-14 w-14 flex-shrink-0 rounded-full border border-gray-500   object-cover object-center filter transition duration-300 ease-in-out group-hover:grayscale"
           src={urlFor(skill.image).url()}
         />
@@ -29,7 +31,7 @@ const Skill = ({ skill, directionLeft }: Props) => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
