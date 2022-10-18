@@ -26,7 +26,7 @@ const Projects = ({ projects }: Props) => {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center overflow-hidden break-words rounded-lg px-4 py-6 text-left text-5xl lowercase tracking-widest text-dark-gray"
+              className="flex items-center justify-center overflow-hidden break-words rounded-lg bg-off-white/50 px-4 py-2 text-center  text-3xl lowercase tracking-widest text-dark-gray mix-blend-normal shadow"
             >
               {project.title}
             </motion.div>
