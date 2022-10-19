@@ -10,7 +10,7 @@ type Props = {
 
 const Header = ({ socials }: Props) => {
   return (
-    <header className="sticky top-0 z-50 w-full bg-off-white shadow-sm dark:bg-dark-gray">
+    <header className="sticky top-0 z-50 w-full bg-off-white shadow-sm transition-all duration-300 dark:bg-dark-gray">
       <div className="mx-auto flex max-w-7xl flex-row items-start justify-between p-5 px-10">
         {/* Begin: Left Section */}
         <motion.div

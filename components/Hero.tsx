@@ -30,8 +30,8 @@ const Hero = ({ pageInfo }: Props) => {
         }}
         className="absolute top-32 flex flex-col items-center justify-center"
       >
-        <div className="absolute top-6 h-36 w-36 animate-ping rounded-full border border-dark-gray/10"></div>
-        <div className="absolute top-0 h-40 w-40 animate-pulse rounded-full border border-dark-gray/20"></div>
+        <div className="absolute top-6 h-36 w-36 animate-ping rounded-full border border-dark-gray/10 transition-all duration-300 dark:border-off-white/10"></div>
+        <div className="absolute top-0 h-40 w-40 animate-pulse rounded-full border border-dark-gray/20 transition-all duration-300 dark:border-off-white/20"></div>
       </motion.div>
       {/* End: Background Circles */}
 
@@ -50,19 +50,19 @@ const Hero = ({ pageInfo }: Props) => {
         {/* End: Profile Picture */}
 
         {/* Begin: Name */}
-        <h2 className="text-3xl uppercase tracking-tighter text-dark-gray">
+        <h2 className="text-3xl uppercase tracking-tighter text-dark-gray transition-all duration-300 dark:text-off-white">
           {pageInfo?.name}
         </h2>
         {/* End: Name */}
 
         {/* Begin: Designation */}
-        <h2 className="mx-auto max-w-xs text-xs uppercase tracking-widest text-dark-gray">
+        <h2 className="mx-auto max-w-xs text-xs uppercase tracking-widest text-dark-gray transition-all duration-300 dark:text-off-white">
           {pageInfo?.role}
         </h2>
         {/* End: Designation */}
 
         {/* Begin: Attributes */}
-        <h1 className="text-4xl font-semibold">
+        <h1 className="text-4xl font-semibold transition-all duration-300 dark:text-mint-green">
           <span>{attributes}</span>
           <Cursor cursorColor="#dfeeee" />
         </h1>
@@ -76,7 +76,7 @@ const Hero = ({ pageInfo }: Props) => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40"
+              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-mint-green/40"
             >
               About
             </motion.button>
@@ -88,7 +88,7 @@ const Hero = ({ pageInfo }: Props) => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40"
+              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-mint-green/40"
             >
               Experience
             </motion.button>
@@ -100,7 +100,7 @@ const Hero = ({ pageInfo }: Props) => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40"
+              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-mint-green/40"
             >
               Skills
             </motion.button>
@@ -112,7 +112,7 @@ const Hero = ({ pageInfo }: Props) => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-primary-orange/40"
+              className="m-1 rounded-full border border-dark-gray/20 px-6 py-2 text-sm uppercase tracking-widest text-gray-500 transition-all hover:border-mint-green/40"
             >
               Projects
             </motion.button>
