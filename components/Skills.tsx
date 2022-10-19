@@ -14,7 +14,7 @@ const Skills = ({ skills }: Props) => {
       className="flex h-screen flex-col items-center justify-center space-y-2 px-10 md:space-y-8"
     >
       {/* Begin: Section Title */}
-      <h3 className="text-center text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4">
+      <h3 className="text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4 transition-all duration-300 dark:text-off-white/50 dark:decoration-off-white/20 ">
         Skills
       </h3>
       {/* End: Section Title */}

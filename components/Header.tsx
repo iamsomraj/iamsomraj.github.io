@@ -10,7 +10,7 @@ type Props = {
 
 const Header = ({ socials }: Props) => {
   return (
-    <header className="sticky top-0 z-50 w-full bg-off-white shadow-sm transition-all duration-300 dark:bg-dark-gray">
+    <header className="sticky top-0 z-50 w-full bg-off-white shadow-sm transition-all duration-300 dark:bg-dark-gray dark:shadow dark:shadow-gray-50/10">
       <div className="mx-auto flex max-w-7xl flex-row items-start justify-between p-5 px-10">
         {/* Begin: Left Section */}
         <motion.div
@@ -65,7 +65,7 @@ const Header = ({ socials }: Props) => {
                 bgColor="#dfeeee"
               />
               {/* End: Mail Icon */}
-              <p className="hidden text-sm uppercase md:inline-flex">
+              <p className="hidden text-sm uppercase dark:text-off-white md:inline-flex">
                 Get in Touch
               </p>
             </>
