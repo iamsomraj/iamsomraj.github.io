@@ -56,13 +56,13 @@ const Hero = ({ pageInfo }: Props) => {
         {/* End: Name */}
 
         {/* Begin: Designation */}
-        <h2 className="mx-auto max-w-xs text-xs uppercase tracking-widest text-dark-gray transition-all duration-300 dark:text-off-white">
+        <h2 className="mx-auto max-w-xs text-xs uppercase tracking-widest text-dark-gray transition-all duration-300 dark:text-off-white/50">
           {pageInfo?.role}
         </h2>
         {/* End: Designation */}
 
         {/* Begin: Attributes */}
-        <h1 className="text-4xl font-semibold transition-all duration-300 dark:text-mint-green">
+        <h1 className="text-4xl font-semibold transition-all duration-300">
           <span>{attributes}</span>
           <Cursor cursorColor="#dfeeee" />
         </h1>
