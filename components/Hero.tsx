@@ -28,15 +28,15 @@ const Hero = ({ pageInfo }: Props) => {
         transition={{
           duration: 2.5,
         }}
-        className="absolute top-32 flex flex-col items-center justify-center"
+        className="absolute top-1/4 flex flex-col items-center justify-center"
       >
-        <div className="absolute top-6 h-36 w-36 animate-ping rounded-full border border-dark-gray/10 transition-all duration-300 dark:border-off-white/10"></div>
-        <div className="absolute top-0 h-40 w-40 animate-pulse rounded-full border border-dark-gray/20 transition-all duration-300 dark:border-off-white/20"></div>
+        <div className="absolute top-0 h-36 w-36 animate-ping rounded-full border border-dark-gray/10 transition-all duration-300 dark:border-off-white/10"></div>
+        <div className="absolute -top-4 h-40 w-40 animate-pulse rounded-full border border-dark-gray/20 transition-all duration-300 dark:border-off-white/20"></div>
       </motion.div>
       {/* End: Background Circles */}
 
       {/* Begin: Personal Details */}
-      <div className="absolute top-36 flex flex-col items-center justify-center space-y-4 px-10">
+      <div className="absolute top-1/4  flex flex-col items-center justify-center space-y-4 px-10">
         {/* Begin: Profile Picture */}
         {pageInfo?.heroImage && (
           <Image

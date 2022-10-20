@@ -1,7 +1,5 @@
-import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline';
 import type { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
 import About from '../components/About';
 import ContactMe from '../components/ContactMe';
 import Header from '../components/Header';
