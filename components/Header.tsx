@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons';
 import { ISocial } from '../type';
+import ThemeButton from './ThemeButton';
 
 type Props = {
   socials: ISocial[];
@@ -9,7 +10,7 @@ type Props = {
 
 const Header = ({ socials }: Props) => {
   return (
-    <header className="sticky top-0 z-50 w-full bg-off-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-off-white shadow-sm transition-all duration-300 dark:bg-dark-gray dark:shadow dark:shadow-gray-50/10">
       <div className="mx-auto flex max-w-7xl flex-row items-start justify-between p-5 px-10">
         {/* Begin: Left Section */}
         <motion.div
@@ -35,36 +36,41 @@ const Header = ({ socials }: Props) => {
 
         {/* Todo: Add Theme Toggle Button */}
         {/* Begin: Right Section */}
-        <Link href="#contact">
-          <motion.div
-            initial={{
-              x: 500,
-              opacity: 0.5,
-              scale: 0.5,
-            }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              scale: 1,
-            }}
-            transition={{
-              duration: 1.5,
-            }}
-            className="flex cursor-pointer flex-row items-center space-x-2 text-dark-gray"
-          >
-            {/* Begin: Mail Icon */}
-            <SocialIcon
-              className="cursor-pointer"
-              network="email"
-              fgColor="#323232"
-              bgColor="#dfeeee"
-            />
-            {/* End: Mail Icon */}
-            <p className="hidden text-sm uppercase md:inline-flex">
-              Get in Touch
-            </p>
-          </motion.div>
-        </Link>
+        <motion.div
+          initial={{
+            x: 500,
+            opacity: 0.5,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+          className="flex cursor-pointer flex-row items-center space-x-2 text-dark-gray"
+        >
+          {/* Begin: Theme Button */}
+          <ThemeButton />
+          {/* End: Theme Button */}
+          {/* Begin: Mail Icon */}
+          <Link href="#contact">
+            <>
+              <SocialIcon
+                className="cursor-pointer"
+                network="email"
+                fgColor="#323232"
+                bgColor="#dfeeee"
+              />
+              {/* End: Mail Icon */}
+              <p className="hidden text-sm uppercase dark:text-off-white md:inline-flex">
+                Get in Touch
+              </p>
+            </>
+          </Link>
+        </motion.div>
         {/* End: Right Section */}
       </div>
     </header>
