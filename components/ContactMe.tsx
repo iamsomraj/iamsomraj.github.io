@@ -81,7 +81,7 @@ const ContactMe = (props: Props) => {
 
       <form
         onSubmit={onSubmit}
-        className="flex w-full max-w-md flex-col space-y-1 px-10"
+        className="flex w-full max-w-md flex-col space-y-2 px-10"
       >
         <div className="flex w-full space-x-2">
           <input
@@ -113,7 +113,7 @@ const ContactMe = (props: Props) => {
 
         <button
           type="submit"
-          className="rounded-md bg-dark-gray py-3 px-10 text-lg font-bold text-off-white"
+          className="rounded-md bg-dark-gray py-3 px-10 text-lg font-bold text-off-white dark:bg-off-white/20"
         >
           Submit
         </button>

@@ -26,7 +26,7 @@ const Projects = ({ projects }: Props) => {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center overflow-hidden break-words rounded-lg bg-off-white/50 px-4 py-2 text-center  text-3xl lowercase tracking-widest text-dark-gray mix-blend-normal shadow"
+              className="flex items-center justify-center overflow-hidden break-words rounded-lg bg-off-white/50 px-4 py-2 text-center text-3xl lowercase  tracking-widest text-dark-gray mix-blend-normal shadow dark:bg-off-white/10 dark:text-off-white"
             >
               {project.title}
             </motion.div>
@@ -36,7 +36,7 @@ const Projects = ({ projects }: Props) => {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="cursor-pointer"
+              className="cursor-pointer rounded-full dark:bg-mint-green"
             >
               <SocialIcon
                 url={project.linkToBuild}
@@ -47,7 +47,7 @@ const Projects = ({ projects }: Props) => {
             </motion.div>
 
             <div className="max-w-6xl space-y-10 px-0 md:px-10">
-              <h4 className="mr-2 text-center font-bold text-dark-gray">
+              <h4 className="mr-2 text-center font-bold text-dark-gray dark:text-off-white/40">
                 Project {index + 1} of {projects.length}
               </h4>
 
@@ -66,7 +66,7 @@ const Projects = ({ projects }: Props) => {
                     tech.image && (
                       <motion.img
                         key={tech._id}
-                        className="h-10 w-10 flex-shrink-0 rounded-full border border-dark-gray/60 object-cover object-center"
+                        className="h-10 w-10 flex-shrink-0 rounded-full border border-dark-gray/60 object-cover object-center dark:border-off-white/20"
                         src={urlFor(tech.image).url()}
                         alt={tech.title}
                       />
@@ -79,7 +79,7 @@ const Projects = ({ projects }: Props) => {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="max-w-md text-center text-base leading-relaxed text-dark-gray"
+                className="max-w-md text-center text-base leading-relaxed text-dark-gray dark:text-off-white"
               >
                 {project.summary}
               </motion.div>
@@ -88,7 +88,7 @@ const Projects = ({ projects }: Props) => {
         ))}
       </div>
 
-      <div className="absolute top-[30%] left-0 h-[500px] w-full -skew-y-12 bg-mint-green"></div>
+      <div className="absolute top-[30%] left-0 h-[500px] w-full -skew-y-12 bg-mint-green dark:bg-mint-green/10"></div>
     </motion.div>
   );
 };
