@@ -31,13 +31,13 @@ const ExperienceCard = ({ experience }: Props) => {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="flex items-center justify-center overflow-hidden break-words rounded-lg bg-mint-green px-2 py-1 text-left text-xl font-bold capitalize tracking-widest text-dark-gray"
+        className="flex items-center justify-center overflow-hidden break-words rounded-lg bg-mint-green px-2 py-1 text-left text-xl font-bold capitalize tracking-widest text-dark-gray dark:bg-mint-green/50"
       >
         {experience.company}
       </motion.p>
       {/* End: Company Name */}
 
-      <div className="text-left text-sm font-medium text-dark-gray/50">
+      <div className="text-left text-sm font-medium text-dark-gray/50 dark:text-off-white/50">
         {experience.dateStarted}
         {' - '}
         {experience.isCurrentlyWorkingHere ? 'Present' : experience.dateEnded}
@@ -51,7 +51,7 @@ const ExperienceCard = ({ experience }: Props) => {
             tech.image && (
               <motion.img
                 key={tech._id}
-                className="m-2 h-10 w-10 flex-shrink-0 rounded-full border border-dark-gray/20 object-cover object-center"
+                className="m-2 h-10 w-10 flex-shrink-0 rounded-full border border-dark-gray/20 object-cover object-center dark:border-off-white/10"
                 src={urlFor(tech.image).url()}
                 alt={tech.title}
               />
@@ -69,7 +69,7 @@ const ExperienceCard = ({ experience }: Props) => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             key={index}
-            className="text-sm font-medium text-dark-gray"
+            className="max-w-lg text-xs font-medium text-dark-gray dark:text-off-white/80 md:text-sm"
           >
             {point}
           </motion.li>
