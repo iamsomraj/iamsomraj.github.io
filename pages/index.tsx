@@ -70,19 +70,9 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       {/* Begin: Contact Me */}
       <section id="contact" className="snap-start">
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo} />
       </section>
       {/* End: Contact Me */}
-
-      {/* Begin: Footer */}
-      <footer className="sticky bottom-5 z-50 w-full cursor-pointer">
-        <Link href="#contact">
-          <div className="flex items-center justify-center">
-            <ChevronDoubleDownIcon className="h-10 w-10 animate-bounce rounded-full bg-mint-green p-3 text-dark-gray shadow" />
-          </div>
-        </Link>
-      </footer>
-      {/* End: Footer */}
     </div>
   );
 };

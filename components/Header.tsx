@@ -57,7 +57,7 @@ const Header = ({ socials }: Props) => {
           {/* End: Theme Button */}
           {/* Begin: Mail Icon */}
           <Link href="#contact">
-            <>
+            <div className='flex space-x-2 items-center'>
               <SocialIcon
                 className="cursor-pointer"
                 network="email"
@@ -68,7 +68,7 @@ const Header = ({ socials }: Props) => {
               <p className="hidden text-sm uppercase dark:text-off-white md:inline-flex">
                 Get in Touch
               </p>
-            </>
+            </div>
           </Link>
         </motion.div>
         {/* End: Right Section */}

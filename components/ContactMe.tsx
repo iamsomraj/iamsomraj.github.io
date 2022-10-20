@@ -1,8 +1,11 @@
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import { Resolver, useForm } from 'react-hook-form';
+import { IPageInfo } from '../type';
 
-type Props = {};
+type Props = {
+  pageInfo: IPageInfo;
+};
 
 type FormValues = {
   name: string;
@@ -48,7 +51,7 @@ const ContactMe = (props: Props) => {
   });
 
   return (
-    <div className="flex h-screen max-w-full flex-col items-center justify-center space-y-6 px-10">
+    <div className="relative flex h-screen max-w-full flex-col items-center justify-center space-y-6 px-10">
       {/* Begin: Section Title */}
       <h3 className="text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4 transition-all duration-300 dark:text-off-white/50 dark:decoration-off-white/20 ">
         Contact
@@ -118,6 +121,24 @@ const ContactMe = (props: Props) => {
           Submit
         </button>
       </form>
+
+      {/* Begin: Made With Section */}
+      <motion.div
+        className="absolute bottom-3 cursor-pointer text-xs text-dark-gray dark:text-off-white"
+        initial={{
+          opacity: 0,
+        }}
+        transition={{ duration: 1.2 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <p>
+          {'Made with '}
+          &hearts;
+          {` by ${props.pageInfo.name}`}
+        </p>
+      </motion.div>
+      {/* End: Made With Section */}
     </div>
   );
 };
