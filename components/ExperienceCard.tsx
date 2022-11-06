@@ -3,9 +3,10 @@ import { urlFor } from '../sanity';
 import { IExperience } from '../type';
 type Props = {
   experience: IExperience;
+  index: number;
 };
 
-const ExperienceCard = ({ experience }: Props) => {
+const ExperienceCard = ({ experience, index }: Props) => {
   return (
     <div
       key={experience._id}
@@ -25,17 +26,20 @@ const ExperienceCard = ({ experience }: Props) => {
       )}
       {/* End: Company Image */}
 
-      {/* Begin: Company Name */}
+      {/* Begin: Experience Number & Company Name */}
       <motion.p
         initial={{ opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="flex items-center justify-center overflow-hidden break-words rounded-lg bg-mint-green px-2 py-1 text-left text-xl font-bold capitalize tracking-widest text-dark-gray dark:bg-mint-green/50"
+        className="flex items-center justify-center overflow-hidden break-words rounded-lg px-2 py-1 text-left text-xl font-bold capitalize tracking-widest text-dark-gray dark:text-mint-green/50"
       >
-        {experience.company}
+        <span className="mr-2 text-xs italic tracking-tighter">
+          {index < 9 ? `0${index + 1}` : index + 1}
+        </span>
+        <span>{experience.company}</span>
       </motion.p>
-      {/* End: Company Name */}
+      {/* End: Experience Number & Company Name */}
 
       <div className="text-left text-sm font-medium text-dark-gray/50 dark:text-off-white/50">
         {experience.dateStarted}
