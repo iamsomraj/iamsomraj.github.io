@@ -34,10 +34,14 @@ const ExperienceCard = ({ experience, index }: Props) => {
         viewport={{ once: true }}
         className="flex items-center justify-center overflow-hidden break-words rounded-lg px-2 py-1 text-left text-xl font-bold capitalize tracking-widest text-dark-gray dark:text-mint-green/50"
       >
+        {/* Begin: Experience Number */}
         <span className="mr-2 text-xs italic tracking-tighter">
           {index < 9 ? `0${index + 1}` : index + 1}
         </span>
+        {/* End: Experience Number */}
+        {/* Begin: Company Name */}
         <span>{experience.company}</span>
+        {/* End: Company Name */}
       </motion.p>
       {/* End: Experience Number & Company Name */}
 
