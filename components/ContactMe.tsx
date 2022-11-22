@@ -121,24 +121,6 @@ const ContactMe = (props: Props) => {
           Submit
         </button>
       </form>
-
-      {/* Begin: Made With Section */}
-      <motion.div
-        className="absolute bottom-3 cursor-pointer text-xs text-dark-gray dark:text-off-white"
-        initial={{
-          opacity: 0,
-        }}
-        transition={{ duration: 1.2 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
-        <p>
-          {'Made with '}
-          &hearts;
-          {` by ${props.pageInfo.name}`}
-        </p>
-      </motion.div>
-      {/* End: Made With Section */}
     </div>
   );
 };
