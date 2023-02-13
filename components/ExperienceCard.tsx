@@ -7,6 +7,21 @@ type Props = {
 };
 
 const ExperienceCard = ({ experience, index }: Props) => {
+
+  /**
+   * @description formats the date to 'Month Day, Year'
+   * @param date 
+   * @returns the date in the format of 'Month Day, Year'
+   */
+  const formatDate = (date: string) => {
+    const dateObj = new Date(date);
+    return dateObj.toLocaleDateString('en-US', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
+  };
+
   return (
     <div
       key={experience._id}
@@ -46,9 +61,11 @@ const ExperienceCard = ({ experience, index }: Props) => {
       {/* End: Experience Number & Company Name */}
 
       <div className="text-left text-sm font-medium text-dark-gray/50 dark:text-off-white/50">
-        {experience.dateStarted}
+        {formatDate(experience.dateStarted)}
         {' - '}
-        {experience.isCurrentlyWorkingHere ? 'Present' : experience.dateEnded}
+        {experience.isCurrentlyWorkingHere
+          ? 'Present'
+          : formatDate(experience.dateEnded)}
       </div>
 
       {/* Begin: Technologies Used */}
