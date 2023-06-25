@@ -34,7 +34,6 @@ const Header = ({ socials }: Props) => {
         </motion.div>
         {/* End: Left Section */}
 
-        {/* Todo: Add Theme Toggle Button */}
         {/* Begin: Right Section */}
         <motion.div
           initial={{
@@ -57,7 +56,7 @@ const Header = ({ socials }: Props) => {
           {/* End: Theme Button */}
           {/* Begin: Mail Icon */}
           <Link href="#contact">
-            <div className='flex space-x-2 items-center'>
+            <div className="flex items-center space-x-2">
               <SocialIcon
                 className="cursor-pointer"
                 network="email"
