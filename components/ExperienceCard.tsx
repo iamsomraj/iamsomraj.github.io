@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { urlFor } from '../sanity';
 import { IExperience } from '@/types/index';
+import { urlFor } from '@/utils/sanity';
+import { motion } from 'framer-motion';
 type Props = {
   experience: IExperience;
   index: number;

@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
-import { urlFor } from '../sanity';
 import { ISkill } from '@/types/index';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { urlFor } from '@/utils/sanity';
 type Props = {
   skill: ISkill;
   directionLeft?: boolean;
@@ -19,7 +20,10 @@ const Skill = ({ skill, directionLeft }: Props) => {
       className="group relative flex cursor-pointer"
     >
       {skill.image && (
-        <img
+        <Image
+          alt={skill.title}
+          width={56}
+          height={56}
           className="h-14 w-14 flex-shrink-0 rounded-full border border-gray-500 object-cover object-center filter transition duration-300 ease-in-out group-hover:grayscale"
           src={urlFor(skill.image).url()}
         />
