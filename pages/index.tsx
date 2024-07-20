@@ -26,7 +26,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div className="h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden overflow-y-scroll scroll-smooth bg-off-white text-dark-gray transition-all duration-300 scrollbar scrollbar-track-mint-green/80  scrollbar-thumb-dark-gray/80 dark:bg-dark-gray dark:text-off-white dark:scrollbar-track-mint-green/20">
       <Head>
-        <title>Somraj Mukherjee's Portfolio</title>
+        <title>Somraj Mukherjee&apos;s Portfolio</title>
         <meta
           name="description"
           content="Somraj Mukherjee - Full Stack Developer"
