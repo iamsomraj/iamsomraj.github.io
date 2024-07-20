@@ -26,14 +26,14 @@ To run this project, you will need to add the following environment variables to
 
 - `NEXT_PUBLIC_SANITY_DATASET` : (local / production / development)
 - `NEXT_PUBLIC_SANITY_PROJECT_ID` : Project ID
-- `NEXT_PUBLIC_BASE_URL` : (http://localhost:3000)
+- `NEXT_PUBLIC_BASE_URL` : (<http://localhost:3000>)
 
 Create these environment variables, save them in root folder. File name can be `.env.local`.
 
 - Start iamsomraj.github.io
 
 ```bash
-  npm run dev
+  pnpm dev
 ```
 
 ## Tech Stack
@@ -51,4 +51,4 @@ Create these environment variables, save them in root folder. File name can be `
 
 ## Feedback
 
-If you have any feedback or you want to give me some tips related to development or even documentation, please reach out to me at iamsomraj@gmail.com.
+If you have any feedback or you want to give me some tips related to development or even documentation, please reach out to me at <iamsomraj@gmail.com>.
