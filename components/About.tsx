@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { urlFor } from '../sanity';
-import { IPageInfo } from '../type';
+import { IPageInfo } from '@/types/index';
 
 type Props = {
   pageInfo: IPageInfo;
@@ -15,7 +15,7 @@ const About = ({ pageInfo }: Props) => {
       className="flex h-screen flex-col items-center justify-center space-y-2 md:space-y-8"
     >
       {/* Begin: Section Title */}
-      <h3 className="text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4 transition-all duration-300 dark:text-off-white/50 dark:decoration-off-white/20 ">
+      <h3 className="text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4 transition-all duration-300 dark:text-off-white/50 dark:decoration-off-white/20">
         About
       </h3>
       {/* End: Section Title */}
@@ -47,7 +47,7 @@ const About = ({ pageInfo }: Props) => {
         >
           <h4 className="text-center text-2xl font-semibold md:text-left">
             Here is a{' '}
-            <span className="rounded-lg bg-mint-green py-1 px-2 transition-all duration-300 dark:text-dark-gray">
+            <span className="rounded-lg bg-mint-green px-2 py-1 transition-all duration-300 dark:text-dark-gray">
               little
             </span>{' '}
             background

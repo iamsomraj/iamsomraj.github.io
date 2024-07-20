@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { urlFor } from '../sanity';
-import { IPageInfo } from '../type';
+import { IPageInfo } from '@/types/index';
 
 type Props = {
   pageInfo: IPageInfo;
@@ -36,7 +36,7 @@ const Hero = ({ pageInfo }: Props) => {
       {/* End: Background Circles */}
 
       {/* Begin: Personal Details */}
-      <div className="absolute top-1/4  flex flex-col items-center justify-center space-y-4 px-10">
+      <div className="absolute top-1/4 flex flex-col items-center justify-center space-y-4 px-10">
         {/* Begin: Profile Picture */}
         {pageInfo?.heroImage && (
           <Image

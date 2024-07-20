@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
 import { urlFor } from '../sanity';
-import { IProject } from '../type';
+import { IProject } from '@/types/index';
 
 type Props = {
   projects: IProject[];
@@ -26,7 +26,7 @@ const Projects = ({ projects }: Props) => {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center overflow-hidden break-words rounded-lg bg-off-white/50 px-4 py-2 text-center text-3xl lowercase  tracking-widest text-dark-gray mix-blend-normal shadow dark:bg-off-white/10 dark:text-off-white"
+              className="flex items-center justify-center overflow-hidden break-words rounded-lg bg-off-white/50 px-4 py-2 text-center text-3xl lowercase tracking-widest text-dark-gray mix-blend-normal shadow dark:bg-off-white/10 dark:text-off-white"
             >
               {project.title}
             </motion.div>
@@ -70,7 +70,7 @@ const Projects = ({ projects }: Props) => {
                         src={urlFor(tech.image).url()}
                         alt={tech.title}
                       />
-                    )
+                    ),
                 )}
               </motion.div>
 
@@ -88,7 +88,7 @@ const Projects = ({ projects }: Props) => {
         ))}
       </div>
 
-      <div className="absolute top-[30%] left-0 h-[500px] w-full -skew-y-12 bg-mint-green dark:bg-mint-green/10"></div>
+      <div className="absolute left-0 top-[30%] h-[500px] w-full -skew-y-12 bg-mint-green dark:bg-mint-green/10"></div>
     </motion.div>
   );
 };

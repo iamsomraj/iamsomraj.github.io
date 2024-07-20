@@ -1,16 +1,15 @@
 import { motion } from 'framer-motion';
 import { urlFor } from '../sanity';
-import { IExperience } from '../type';
+import { IExperience } from '@/types/index';
 type Props = {
   experience: IExperience;
   index: number;
 };
 
 const ExperienceCard = ({ experience, index }: Props) => {
-
   /**
    * @description formats the date to 'Month Day, Year'
-   * @param date 
+   * @param date
    * @returns the date in the format of 'Month Day, Year'
    */
   const formatDate = (date: string) => {
@@ -80,7 +79,7 @@ const ExperienceCard = ({ experience, index }: Props) => {
                 src={urlFor(tech.image).url()}
                 alt={tech.title}
               />
-            )
+            ),
         )}
       </div>
       {/* End: Technologies Used */}

@@ -1,18 +1,27 @@
+import About from '@/components/About';
+import ContactMe from '@/components/ContactMe';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import Projects from '@/components/Projects';
+import Skills from '@/components/Skills';
+import WorkExperience from '@/components/WorkExperience';
+
+import { fetchExperiences } from '@/utils/fetchExperiences';
+import { fetchPageInfo } from '@/utils/fetchPageInfo';
+import { fetchProjects } from '@/utils/fetchProjects';
+import { fetchSkills } from '@/utils/fetchSkills';
+import { fetchSocials } from '@/utils/fetchSocials';
+
+import {
+  IExperience,
+  IPageInfo,
+  IProject,
+  ISkill,
+  ISocial,
+} from '@/types/index';
+
 import type { GetStaticProps } from 'next';
 import Head from 'next/head';
-import About from '../components/About';
-import ContactMe from '../components/ContactMe';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Projects from '../components/Projects';
-import Skills from '../components/Skills';
-import WorkExperience from '../components/WorkExperience';
-import { IExperience, IPageInfo, IProject, ISkill, ISocial } from '../type';
-import { fetchExperiences } from '../utils/fetchExperiences';
-import { fetchPageInfo } from '../utils/fetchPageInfo';
-import { fetchProjects } from '../utils/fetchProjects';
-import { fetchSkills } from '../utils/fetchSkills';
-import { fetchSocials } from '../utils/fetchSocials';
 
 type Props = {
   pageInfo: IPageInfo;
@@ -24,7 +33,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden overflow-y-scroll scroll-smooth bg-off-white text-dark-gray transition-all duration-300 scrollbar scrollbar-track-mint-green/80  scrollbar-thumb-dark-gray/80 dark:bg-dark-gray dark:text-off-white dark:scrollbar-track-mint-green/20">
+    <div className="h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden overflow-y-scroll scroll-smooth bg-off-white text-dark-gray transition-all duration-300 scrollbar scrollbar-track-mint-green/80 scrollbar-thumb-dark-gray/80 dark:bg-dark-gray dark:text-off-white dark:scrollbar-track-mint-green/20">
       <Head>
         <title>Somraj Mukherjee&apos;s Portfolio</title>
         <meta

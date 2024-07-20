@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { urlFor } from '../sanity';
-import { ISkill } from '../type';
+import { ISkill } from '@/types/index';
 type Props = {
   skill: ISkill;
   directionLeft?: boolean;
@@ -20,7 +20,7 @@ const Skill = ({ skill, directionLeft }: Props) => {
     >
       {skill.image && (
         <img
-          className="h-14 w-14 flex-shrink-0 rounded-full border border-gray-500   object-cover object-center filter transition duration-300 ease-in-out group-hover:grayscale"
+          className="h-14 w-14 flex-shrink-0 rounded-full border border-gray-500 object-cover object-center filter transition duration-300 ease-in-out group-hover:grayscale"
           src={urlFor(skill.image).url()}
         />
       )}

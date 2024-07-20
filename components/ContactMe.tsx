@@ -1,7 +1,7 @@
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import { Resolver, useForm } from 'react-hook-form';
-import { IPageInfo } from '../type';
+import { IPageInfo } from '@/types/index';
 
 type Props = {
   pageInfo: IPageInfo;
@@ -53,7 +53,7 @@ const ContactMe = (props: Props) => {
   return (
     <div className="relative flex h-screen max-w-full flex-col items-center justify-center space-y-6 px-10">
       {/* Begin: Section Title */}
-      <h3 className="text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4 transition-all duration-300 dark:text-off-white/50 dark:decoration-off-white/20 ">
+      <h3 className="text-2xl font-medium uppercase tracking-widest text-dark-gray/50 underline decoration-mint-green underline-offset-4 transition-all duration-300 dark:text-off-white/50 dark:decoration-off-white/20">
         Contact
       </h3>
       {/* End: Section Title */}
@@ -91,13 +91,13 @@ const ContactMe = (props: Props) => {
             {...register('name')}
             type="text"
             placeholder="Name"
-            className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray w-full rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all  focus:border-dark-gray"
+            className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray w-full rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-dark-gray"
           />
           <input
             {...register('email')}
             type="email"
             placeholder="Email"
-            className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray w-full rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all  focus:border-dark-gray"
+            className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray w-full rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-dark-gray"
           />
         </div>
 
@@ -105,18 +105,18 @@ const ContactMe = (props: Props) => {
           {...register('subject')}
           type="text"
           placeholder="Subject"
-          className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all  focus:border-dark-gray"
+          className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-dark-gray"
         />
 
         <textarea
           {...register('message')}
           placeholder="Message"
-          className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray resize-none rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all  focus:border-dark-gray"
+          className="focus:text-daborder-dark-gray hover:text-daborder-dark-gray resize-none rounded-md border-b border-dark-gray/70 bg-mint-green px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-dark-gray"
         ></textarea>
 
         <button
           type="submit"
-          className="rounded-md bg-dark-gray py-3 px-10 text-lg font-bold text-off-white dark:bg-off-white/20"
+          className="rounded-md bg-dark-gray px-10 py-3 text-lg font-bold text-off-white dark:bg-off-white/20"
         >
           Submit
         </button>

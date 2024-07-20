@@ -1,6 +1,6 @@
 import { groq } from 'next-sanity';
 import { sanityClient } from '../sanity';
-import { IExperience } from '../type';
+import { IExperience } from '@/types/index';
 
 const query = groq`*[_type == "experience"] {
   ...,

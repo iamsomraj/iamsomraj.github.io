@@ -1,6 +1,6 @@
 import { groq } from 'next-sanity';
 import { sanityClient } from '../sanity';
-import { IProject } from '../type';
+import { IProject } from '@/types/index';
 
 const query = groq`*[_type == "project"] {
   ...,

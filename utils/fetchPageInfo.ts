@@ -1,6 +1,6 @@
 import { groq } from 'next-sanity';
 import { sanityClient } from '../sanity';
-import { IPageInfo } from '../type';
+import { IPageInfo } from '@/types/index';
 
 const query = groq`*[_type == "pageInfo"][0]`;
 

@@ -1,6 +1,6 @@
 import { groq } from 'next-sanity';
 import { sanityClient } from '../sanity';
-import { ISkill } from '../type';
+import { ISkill } from '@/types/index';
 
 const query = groq`*[_type == "skill"]`;
 

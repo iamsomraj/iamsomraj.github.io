@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { SocialIcon } from 'react-social-icons';
-import { ISocial } from '../type';
+import { ISocial } from '@/types/index';
 import ThemeButton from './ThemeButton';
 
 type Props = {
